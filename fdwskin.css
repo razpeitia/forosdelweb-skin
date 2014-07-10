@@ -7,32 +7,32 @@ font-weight:600;
 body {
 opacity:0;
 transition:opacity .6s ease-out;
-background:#f0f0f0;
+background:#f0f0f0 !important;
 }
 
 .threadsticon {
 position:relative;
 left:15px;
 display:block;
-height:13px;
-width:13px;
+height:13px !important;
+width:13px !important;
 border-radius:50%;
 }
 
 .tist_dot {
-background:#87CEEB;
+background:#87CEEB !important;
 }
 
 .tist_lock {
-background:#CD5C5C;
+background:#CD5C5C !important;
 }
 
 .tist {
-background:#dcdcdc;
+background:#dcdcdc !important;
 }
 
 .tist_moved {
-background:#FFD700;
+background:#FFD700 !important;
 }
 
 tbody[id^=threadbits_forum] tr td.alt2:nth-child(2) {
@@ -64,7 +64,7 @@ padding:20px!important;
 
 .post_content {
 position:relative;
-width:auto;
+width:auto !important;
 font-family:Open Sans;
 font-size:14px;
 line-height:24px;
