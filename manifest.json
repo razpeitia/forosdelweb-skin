@@ -9,5 +9,9 @@
     "matches": ["http://www.forosdelweb.com/*"],
     "css": ["global.css","posts.css","blackened.css"],
     "js": ["jquery.min.js", "fdwskin.js"]
-    }]
+    }],
+
+  "web_accessible_resources": [
+       "images/*.png"
+     ]
 }

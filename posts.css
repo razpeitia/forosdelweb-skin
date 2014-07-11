@@ -363,7 +363,7 @@ table[id^=post] + .vbmenu_popup .vbmenu_option a:hover,table[id^=post] + .vbmenu
   border-radius:50%;
   overflow:hidden;
   transition:all .3s ease-out;
-  background-image: url(images/love.png)
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/love.png');
   margin:0!important;
 }
 
@@ -421,17 +421,17 @@ table[id^=post] + .vbmenu_popup table tr:first-child,
 }
 
 .row_post_options a.edit_post:after {
-  background-image: url(images/edit.png);
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/edit.png');
 }
 
 .row_post_options a.quote_post:after {
-  background-image: url(images/quote.png);
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/quote.png');
 }
 
 .row_post_options a.quote_post.multi:after {
-  background-image: url(images/multi.png);
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/multi.png');
 }
 
 .row_post_options a.quote_post.fast:after {
-  background-image: url(images/quick.png);
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/quick.png');
 }
