@@ -32,7 +32,11 @@ body {
 }
 
 .tist_moved {
-  background:#FFD700 !important;
+  background: #FFD700 !important;
+}
+
+.tist_new,.tist_dot_new {
+  background:#9ACD32 !important;
 }
 
 tbody[id^=threadbits_forum] tr td.alt2:nth-child(2) {
