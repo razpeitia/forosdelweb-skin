@@ -91,15 +91,14 @@ pre {
 }
 
 .post_content .geshibox a:link {
-  color:red;
-  background:none;
-  padding:0;
+  background-color: transparent !important;
+  padding:0 !important;
 }
 
 .post_content .geshibox a.tool:link {
   float:right;
   font-size:.8rem;
-  color:#aaa;
+  color:#aaa !important;
 }
 
 /* post footer */
