@@ -6,7 +6,7 @@ font-weight:600;
 
 body {
 opacity:0;
-transition:opacity .6s ease-out;
+transition:opacity .4s ease-out;
 background:#f0f0f0 !important;
 }
 
@@ -66,7 +66,7 @@ padding:20px!important;
 position:relative;
 width:auto !important;
 font-family:Open Sans;
-font-size:14px;
+font-size:14px !important;
 line-height:24px;
 color:#000;
 word-wrap:normal;
@@ -79,7 +79,7 @@ line-height:20px;
 
 .post_content a:link,.post_content a:active,.post_content a:visited {
 display:inline-block;
-font-size:.8rem;
+font-size:.8rem !important;
 font-weight:400;
 background-color:#ccc;
 color:#000;
@@ -121,13 +121,13 @@ background:none;
 
 pre {
 font-family:monaco!important;
-font-size:14px;
+font-size:14px !important;
 }
 
 .post_content code {
 display:inline-block;
 font-family:monaco!important;
-font-size:12px;
+font-size:12px !important;
 background:#fff!important;
 border-radius:4px;
 border:1px solid #ddd;
@@ -158,7 +158,7 @@ padding:0 40px 40px;
 opacity:1;
 }
 
-table[id^=post] tbody tr td:first-child {
+td.user_profile {
 width:240px!important;
 text-align:right;
 }
@@ -182,7 +182,7 @@ display:block;
 text-overflow:ellipsis;
 overflow:hidden;
 white-space:nowrap;
-font:600 1.6rem Open Sans;
+font:600 1.6rem Open Sans !important;
 }
 
 td.user_profile .smallfont {
@@ -244,7 +244,7 @@ table[id^=post] + .vbmenu_popup .vbmenu_option a:link,table[id^=post] + .vbmenu_
 display:block!important;
 background:#333;
 color:#eee;
-font-size:14px;
+font-size:14px !important;
 transition:background .3s;
 padding:10px;
 }
