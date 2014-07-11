@@ -31,13 +31,43 @@ body {
   background:#dcdcdc !important;
 }
 
-.tist_moved {
+.tist_moved,.tist_moved_new {
   background: #FFD700 !important;
 }
 
+  .tist_moved_new:after {
+    position: relative;
+    top: 3px;
+    left: 8px;
+    display: inline-block;
+    content: '';
+    background: #9ACD32 !important;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
 .tist_new,.tist_dot_new {
-  background:#9ACD32 !important;
+  background: #87CEEB !important;
 }
+
+  .tist_dot_new:after {
+    position: relative;
+    display: inline-block;
+    content: '';
+    background: #9ACD32 !important;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    z-index: 0;
+    -webkit-animation: testtest 1s infinite forwards;
+  }
+
+  @-webkit-keyframes testtest {
+    from,to { opacity: 1; }
+    50% { opacity: 0; }
+  }
 
 tbody[id^=threadbits_forum] tr td.alt2:nth-child(2) {
   position:relative;
