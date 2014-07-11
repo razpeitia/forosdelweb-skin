@@ -1,3 +1,28 @@
+.geshibox {
+  font-size:10px!important;
+  color:#ddd!important;
+  background-color:#222!important;
+  border:none!important;
+  margin:.8em 0!important;
+  padding:1em!important;
+}
+
+.geshibox pre {
+  border:none!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+.geshibox .li1,.geshibox .li2 {
+  font-size:14px!important;
+  background-color:#202021!important;
+}
+
+.geshibox pre>div {
+  margin-top:0!important;
+}
+
 .actionscript .de1,.actionscript .de2,.actionscript3 .de1,.actionscript3 .de2,.apache .de1,.apache .de2,.asm .de1,.asm .de2,.asp .de1,.asp .de2,.bash .de1,.bash .de2,.c .de1,.c .de2,.cpp-qt .de1,.cpp-qt .de2,.cpp .de1,.cpp .de2,.csharp .de1,.csharp .de2,.css .de1,.css .de2,.delphi .de1,.delphi .de2,.diff .de1,.diff .de2,.gettext .de1,.gettext .de2,.html4strict .de1,.html4strict .de2,.java .de1,.java .de2,.java5 .de1,.java5 .de2,.javascript .de1,.javascript .de2,.latex .de1,.latex .de2,.mysql .de1,.mysql .de2,.pascal .de1,.pascal .de2,.perl .de1,.perl .de2,.php-brief .de1,.php-brief .de2,.php .de1,.php .de2,.python .de1,.python .de2,.rails .de1,.rails .de2,.robots .de1,.robots .de2,.ruby .de1,.ruby .de2,.smarty .de1,.smarty .de2,.sql .de1,.sql .de2,.tsql .de1,.tsql .de2,.vb .de1,.vb .de2,.vbnet .de1,.vbnet .de2,.visualfoxpro .de1,.visualfoxpro .de2,.winbatch .de1,.winbatch .de2,.xml .de1,.xml .de2 {
 color:#eee!important;
 }
@@ -54,18 +79,6 @@ color:#eee!important;
 
 .tist_new,.tist_dot_new {
 background:#9ACD32;
-}
-
-.row_post_info td.thead .postold,.post_content .date_info .postold,.row_post_content td[id^=td_post] .smallfont,.row_post_content td[id^=td_post] .smallfont + hr,table[id^=post] + .vbmenu_popup table tr:first-child,.quote_text_container span:first-child a img,.row_post_options td:nth-child(2) a.edit_post img,.row_post_options td:nth-child(2) a.quote_post img,.row_post_options .love > div:first-child span a img {
-display:none;
-}
-
-.row_post_info td:first-child,.row_post_info td:last-child,.row_post_content td:first-child,.row_post_options td:first-child,.row_post_options td:last-child, {
-background:#f0f0f0;
-}
-
-.row_post_content td[id^=td_post_],table[id^=post] + .vbmenu_popup table td {
-padding:0;
 }
 
 .geshibox .me1,.geshibox .br0,.geshibox .re0 {

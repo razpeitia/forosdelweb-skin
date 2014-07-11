@@ -102,7 +102,27 @@ pre {
   color:#aaa;
 }
 
-.post_content + div {
+/* post footer */
+.row_post_content td:last-child {
+  position: relative;
+}
+.post_content ~ div.smallfont { /*edited post*/
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: right;
+}
+  .post_content ~ div.smallfont hr {
+    display: none;
+  }
+  .post_content ~ div.smallfont em {
+    font-style: normal;
+  }
+
+.post_content + div:not(.smallfont) {
+  margin-bottom: 20px;
   font-size:12px;
   border-top:1px solid #ccc;
   opacity:.2;
@@ -360,29 +380,24 @@ table[id^=post] + .vbmenu_popup .vbmenu_option a:hover,table[id^=post] + .vbmenu
   padding:5px;
 }
 
-.geshibox {
-  font-size:10px!important;
-  color:#ddd!important;
-  background-color:#222!important;
-  border:none!important;
-  margin:.8em 0!important;
-  padding:1em!important;
+.row_post_info td.thead .postold,
+.post_content .date_info .postold,
+.row_post_content td[id^=td_post] .smallfont:first-child,
+.row_post_content td[id^=td_post] .smallfont:first-child + hr,
+table[id^=post] + .vbmenu_popup table tr:first-child,
+.quote_text_container span:first-child a img,
+.row_post_options td:nth-child(2) a.edit_post img,
+.row_post_options td:nth-child(2) a.quote_post img,
+.row_post_options .love > div:first-child span a img {
+  display:none;
 }
 
-.geshibox pre {
-  border:none!important;
-  width:100%!important;
-  margin:0!important;
-  padding:0!important;
+.row_post_info td:first-child,.row_post_info td:last-child,.row_post_content td:first-child,.row_post_options td:first-child,.row_post_options td:last-child, {
+  background:#f0f0f0;
 }
 
-.geshibox .li1,.geshibox .li2 {
-  font-size:14px!important;
-  background-color:#202021!important;
-}
-
-.geshibox pre>div {
-  margin-top:0!important;
+.row_post_content td[id^=td_post_],table[id^=post] + .vbmenu_popup table td {
+  padding:0;
 }
 
 .row_post_options a.edit_post:after {
