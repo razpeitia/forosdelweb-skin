@@ -9,6 +9,7 @@ $(function() {
       $(this).addClass('cartelito_modcol');
       $(this).parent().addClass('is_modcol');
       if($(this).text().match('Colaborador')) $(this).parent().addClass('is_col')
+      if($(this).text().match('(Desactivado)')) $(this).parent().addClass('is_banned')
     }
     if ($(this).children('a[href*=miembros]').length>0) {
       $(this).addClass('user_avatar');

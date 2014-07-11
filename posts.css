@@ -120,7 +120,7 @@ pre {
     font-style: normal;
   }
 
-.post_content + div:not(.smallfont) {
+.post_content + div:not(.smallfont) { /* user defined footer */
   margin-bottom: 20px;
   font-size:12px;
   border-top:1px solid #ccc;
@@ -133,6 +133,8 @@ pre {
   opacity:1;
 }
 
+/*######### USER PROFILE */
+
 td.user_profile {
   width:240px!important;
   text-align:right;
@@ -144,13 +146,21 @@ td.user_profile {
   padding:60px 20px 20px;
 }
 
-td.user_profile.is_modcol {
-  border-right:4px solid #fae682!important;
-}
+  td.user_profile.is_modcol {
+    border-right:4px solid #fae682!important;
+  }
 
-td.user_profile.is_modcol.is_col {
-  border-right:4px solid #ddd!important;
-}
+  td.user_profile.is_modcol.is_col {
+    border-right:4px solid #ddd!important;
+  }
+
+  td.user_profile.is_modcol.is_banned * {
+    opacity: .6 !important;
+  }
+
+  td.user_profile.is_modcol.is_banned {
+    border-right: none !important;
+  }
 
 .bigusername {
   display:block;
@@ -164,7 +174,7 @@ td.user_profile .smallfont {
   font-family:open sans;
 }
 
-td.user_profile .smallfont.cartelito_modcol {
+td.user_profile:not(.is_banned) .smallfont.cartelito_modcol {
   position:relative;
   left:20px;
   display:inline-block;
@@ -182,7 +192,11 @@ td.user_profile .smallfont.user_avatar {
   z-index:1;
 }
 
-  td.user_profile.is_modcol .smallfont.user_avatar {
+  td.user_profile.is_banned .cartelito_modcol {
+    color: firebrick;
+  }
+
+  td.user_profile.is_modcol:not(.is_banned) .smallfont.user_avatar {
     right:-2px; /* half of border */
   }
 
@@ -391,8 +405,12 @@ table[id^=post] + .vbmenu_popup table tr:first-child,
   display:none;
 }
 
-.row_post_info td:first-child,.row_post_info td:last-child,.row_post_content td:first-child,.row_post_options td:first-child,.row_post_options td:last-child, {
-  background:#f0f0f0;
+.row_post_info td:first-child,
+.row_post_info td:last-child,
+.row_post_content td:first-child,
+.row_post_options td:first-child,
+.row_post_options td:last-child {
+  background-color: #f0f0f0;
 }
 
 .row_post_content td[id^=td_post_],table[id^=post] + .vbmenu_popup table td {
