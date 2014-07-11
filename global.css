@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+strong,b {
+  font-weight:600;
+}
+
+body {
+  opacity:0;
+  transition:opacity .4s ease-out;
+  background:#f0f0f0 !important;
+}
+
+.threadsticon {
+  position:relative;
+  left:15px;
+  display:block;
+  height:13px !important;
+  width:13px !important;
+  border-radius:50%;
+}
+
+.tist_dot {
+  background:#87CEEB !important;
+}
+
+.tist_lock {
+  background:#CD5C5C !important;
+}
+
+.tist {
+  background:#dcdcdc !important;
+}
+
+.tist_moved {
+  background:#FFD700 !important;
+}
+
+tbody[id^=threadbits_forum] tr td.alt2:nth-child(2) {
+  position:relative;
+  z-index:-1;
+}
+
+.thead,.tborder,.alt2.pbit {
+  border:none!important;
+}

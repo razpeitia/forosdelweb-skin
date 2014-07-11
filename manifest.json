@@ -7,7 +7,7 @@
 
   "content_scripts": [{
     "matches": ["http://www.forosdelweb.com/*"],
-    "css": ["fdwskin.css"],
+    "css": ["global.css","posts.css","blackened.css"],
     "js": ["jquery.min.js", "fdwskin.js"]
     }]
 }
