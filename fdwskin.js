@@ -58,6 +58,18 @@ $(function() {
 
   // añadir clase al +1
   $('.row_post_options td:nth-child(2)>div>div>span[id^=fdwvotepos_]').parent().parent().addClass('love');
+
+  // add class to breadcrumb
+  if(window.location.pathname.match(/\/f([0-9]+)\/(.+)-([0-9]+)/)) {
+    $('body > br + div[align=center]').attr('id','post_page_header')
+    post_title_link = $('#navbits_finallink_ltr')[0].outerHTML
+    post_title_text = $('#navbits_finallink_ltr').next('strong').html();
+    post_forum = $('#navbits_finallink_ltr').parent().parent().prev().children().eq(2).children().last().html();
+    $('#post_page_header').children('div').children('div').children('table').eq(0).empty()
+    $('#post_page_header').children('div').children('div').children('.tborder').eq(0).empty()
+    $('#posts').prepend('<div id="post_title">'+post_forum.replace(/»/,'') + post_title_link+'</div>');
+    $('#navbits_finallink_ltr').prepend(post_title_text);
+  }
   
   // #### COSITAS ######
   // mostrar/ocultar citas
