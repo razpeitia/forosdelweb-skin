@@ -1,90 +1,159 @@
 .geshibox {
-  font-size:10px!important;
-  color:#ddd!important;
-  background-color:#222!important;
-  border:none!important;
-  margin:.8em 0!important;
-  padding:1em!important;
-}
+  font-size: 10px !important;
+  color: #dddddd !important;
+  background-color: #222222 !important;
+  border: none !important;
+  margin: 0.8em 0 !important;
+  padding: 1em !important; }
+  .geshibox pre {
+    border: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; }
+  .geshibox .li1, .geshibox .li2 {
+    font-size: 14px !important;
+    background-color: #202021 !important; }
+  .geshibox pre > div {
+    margin-top: 0 !important; }
 
-.geshibox pre {
-  border:none!important;
-  width:100%!important;
-  margin:0!important;
-  padding:0!important;
-}
+.actionscript .de1, .actionscript .de2 {
+  color: #eeeeee !important; }
 
-.geshibox .li1,.geshibox .li2 {
-  font-size:14px!important;
-  background-color:#202021!important;
-}
+.actionscript3 .de1, .actionscript3 .de2 {
+  color: #eeeeee !important; }
 
-.geshibox pre>div {
-  margin-top:0!important;
-}
+.apache .de1, .apache .de2 {
+  color: #eeeeee !important; }
 
-.actionscript .de1,.actionscript .de2,.actionscript3 .de1,.actionscript3 .de2,.apache .de1,.apache .de2,.asm .de1,.asm .de2,.asp .de1,.asp .de2,.bash .de1,.bash .de2,.c .de1,.c .de2,.cpp-qt .de1,.cpp-qt .de2,.cpp .de1,.cpp .de2,.csharp .de1,.csharp .de2,.css .de1,.css .de2,.delphi .de1,.delphi .de2,.diff .de1,.diff .de2,.gettext .de1,.gettext .de2,.html4strict .de1,.html4strict .de2,.java .de1,.java .de2,.java5 .de1,.java5 .de2,.javascript .de1,.javascript .de2,.latex .de1,.latex .de2,.mysql .de1,.mysql .de2,.pascal .de1,.pascal .de2,.perl .de1,.perl .de2,.php-brief .de1,.php-brief .de2,.php .de1,.php .de2,.python .de1,.python .de2,.rails .de1,.rails .de2,.robots .de1,.robots .de2,.ruby .de1,.ruby .de2,.smarty .de1,.smarty .de2,.sql .de1,.sql .de2,.tsql .de1,.tsql .de2,.vb .de1,.vb .de2,.vbnet .de1,.vbnet .de2,.visualfoxpro .de1,.visualfoxpro .de2,.winbatch .de1,.winbatch .de2,.xml .de1,.xml .de2 {
-color:#eee!important;
-}
+.asm .de1, .asm .de2 {
+  color: #eeeeee !important; }
+
+.asp .de1, .asp .de2 {
+  color: #eeeeee !important; }
+
+.bash .de1, .bash .de2 {
+  color: #eeeeee !important; }
+
+.c .de1, .c .de2 {
+  color: #eeeeee !important; }
+
+.cpp-qt .de1, .cpp-qt .de2 {
+  color: #eeeeee !important; }
+
+.cpp .de1, .cpp .de2 {
+  color: #eeeeee !important; }
+
+.csharp .de1, .csharp .de2 {
+  color: #eeeeee !important; }
+
+.css .de1, .css .de2 {
+  color: #eeeeee !important; }
+
+.delphi .de1, .delphi .de2 {
+  color: #eeeeee !important; }
+
+.diff .de1, .diff .de2 {
+  color: #eeeeee !important; }
+
+.gettext .de1, .gettext .de2 {
+  color: #eeeeee !important; }
+
+.html4strict .de1, .html4strict .de2 {
+  color: #eeeeee !important; }
+
+.java .de1, .java .de2 {
+  color: #eeeeee !important; }
+
+.java5 .de1, .java5 .de2 {
+  color: #eeeeee !important; }
+
+.javascript .de1, .javascript .de2 {
+  color: #eeeeee !important; }
+
+.latex .de1, .latex .de2 {
+  color: #eeeeee !important; }
+
+.mysql .de1, .mysql .de2 {
+  color: #eeeeee !important; }
+
+.pascal .de1, .pascal .de2 {
+  color: #eeeeee !important; }
+
+.perl .de1, .perl .de2 {
+  color: #eeeeee !important; }
+
+.php-brief .de1, .php-brief .de2 {
+  color: #eeeeee !important; }
+
+.php .de1, .php .de2 {
+  color: #eeeeee !important; }
+
+.python .de1, .python .de2 {
+  color: #eeeeee !important; }
+
+.rails .de1, .rails .de2 {
+  color: #eeeeee !important; }
+
+.robots .de1, .robots .de2 {
+  color: #eeeeee !important; }
+
+.ruby .de1, .ruby .de2 {
+  color: #eeeeee !important; }
+
+.smarty .de1, .smarty .de2 {
+  color: #eeeeee !important; }
+
+.sql .de1, .sql .de2 {
+  color: #eeeeee !important; }
+
+.tsql .de1, .tsql .de2 {
+  color: #eeeeee !important; }
+
+.vb .de1, .vb .de2 {
+  color: #eeeeee !important; }
+
+.vbnet .de1, .vbnet .de2 {
+  color: #eeeeee !important; }
+
+.visualfoxpro .de1, .visualfoxpro .de2 {
+  color: #eeeeee !important; }
+
+.winbatch .de1, .winbatch .de2 {
+  color: #eeeeee !important; }
+
+.xml .de1, .xml .de2 {
+  color: #eeeeee !important; }
 
 .geshibox .li1 {
-background:#202021!important;
-}
-
-.geshibox .co1,.geshibox .coMULTI {
-color:#7a7a75!important;
-font-style:italic;
-}
-
+  background: #202021 !important; }
+.geshibox .co1, .geshibox .coMULTI {
+  color: #7a7a75 !important;
+  font-style: italic; }
 .geshibox .st0 {
-color:#9f0!important;
-}
-
+  color: #99ff00 !important; }
 .geshibox .kw1 {
-color:#ff8400!important;
-}
-
+  color: #ff8400 !important; }
 .geshibox .kw3 {
-color:#07dffc!important;
-}
-
+  color: #07dffc !important; }
 .geshibox .nu0 {
-color:#6c6!important;
-}
-
-.geshibox [lang=css] .kw2,.geshibox .css .kw2 {
-color:#f9ee7e!important;
-}
-
+  color: #66cc66 !important; }
+.geshibox [lang=css] .kw2, .geshibox .css .kw2 {
+  color: #f9ee7e !important; }
 .geshibox .re1 {
-color:#96703d!important;
-}
+  color: #96703d !important; }
+.geshibox [lang=css] .re3, .geshibox .css .re3 {
+  color: #ca7840 !important; }
+.geshibox [lang=javascript] .me1, .geshibox .javascript .me1 {
+  color: #505e80 !important; }
+.geshibox .text .de1, .geshibox .text .de2 {
+  font-family: monospace, monaco; }
+.geshibox .alt2, .geshibox .alt2Active, .geshibox pre {
+  background: none !important;
+  color: #eeeeee !important; }
+.geshibox .me1, .geshibox .br0, .geshibox .re0 {
+  color: white !important; }
+.geshibox .me2, .geshibox .kw2 {
+  color: #ffcc66 !important; }
 
-.geshibox [lang=css] .re3,.geshibox .css .re3 {
-color:#ca7840!important;
-}
-
-.geshibox [lang=javascript] .me1,.geshibox .javascript .me1 {
-color:#505e80!important;
-}
-
-.geshibox .text .de1,.geshibox .text .de2 {
-font-family:monospace, monaco;
-}
-
-.geshibox .alt2,.geshibox .alt2Active,.geshibox pre {
-background:none!important;
-color:#eee!important;
-}
-
-.geshibox .me1,.geshibox .br0,.geshibox .re0 {
-color:#fff!important;
-}
-
-.geshibox .me2,.geshibox .kw2 {
-color:#fc6!important;
-}
-
-.user_profile,.row_post_info td,.row_post_options td {
-background:#F0F0F0!important;
-}
+.user_profile, .row_post_info td, .row_post_options td {
+  background: #f0f0f0 !important; }

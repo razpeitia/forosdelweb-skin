@@ -29,8 +29,16 @@ $(function() {
   // PIRULAS
   // Cambiar fecha de post hacia celda del post
   $('tr.row_post_info').each(function() {
-    var contenido = '<div class=date_info>' + $(this).children('td:first-child').html() + $(this).children('td:last-child').html() + '</div>';
-    $(this).next().children('td[id^=td_post_]').children('.post_content').prepend(contenido);
+    var post_link, post_input = ''
+    var link = $(this).children('td:last-child').children('a')
+    if(link.length>0) post_link = link[0].outerHTML
+    var input = $(this).children('td:last-child').children('input')
+    if(input.length>0) post_input = input[0].outerHTML
+    var post_permalink = $(this).children('td:last-child').children('b').html()
+    var post_links = '<div class=post_links>' + post_link  + post_permalink + post_input + '</div>';
+    var post_date = '<div class=date_info>' + $(this).children('td:first-child').html() + '</div>';
+    var post_header = '<div class="post_header">' + post_date + post_links + '</div>';
+    $(this).next().children('td[id^=td_post_]').children('.post_content').prepend(post_header);
     $(this).children('td').empty();
   });
 
@@ -59,7 +67,7 @@ $(function() {
   // añadir clase al +1
   $('.row_post_options td:nth-child(2)>div>div>span[id^=fdwvotepos_]').parent().parent().addClass('love');
 
-  // add class to breadcrumb
+  // extract and create post header
   if(window.location.pathname.match(/\/f([0-9]+)\/(.+)-([0-9]+)/)) {
     $('body > br + div[align=center]').attr('id','post_page_header')
     post_title_link = $('#navbits_finallink_ltr')[0].outerHTML
@@ -75,7 +83,7 @@ $(function() {
   // mostrar/ocultar citas
   $('.quote_text_container').click(function(e){
     $(this).children('.quote-text').slideToggle();
-    event.stopPropagation()
+    e.stopPropagation()
   })
 
   // Marcar multicita

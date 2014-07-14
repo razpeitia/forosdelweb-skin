@@ -1,80 +1,71 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
-
-strong,b {
-  font-weight:600;
-}
+strong, b {
+  font-weight: 600; }
 
 body {
-  opacity:0;
-  transition:opacity .4s ease-out;
-  background:#f0f0f0 !important;
-}
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  background: #f0f0f0 !important; }
 
 .threadsticon {
-  position:relative;
-  left:15px;
-  display:block;
-  height:13px !important;
-  width:13px !important;
-  border-radius:50%;
-}
+  position: relative;
+  left: 15px;
+  display: block;
+  height: 13px !important;
+  width: 13px !important;
+  border-radius: 50%; }
 
 .tist_dot {
-  background:#87CEEB !important;
-}
+  background: skyblue !important; }
 
 .tist_lock {
-  background:#CD5C5C !important;
-}
+  background: indianred !important; }
 
 .tist {
-  background:#dcdcdc !important;
-}
+  background: gainsboro !important; }
 
-.tist_moved,.tist_moved_new {
-  background: #FFD700 !important;
-}
+.tist_moved {
+  background: gold !important; }
 
+.tist_moved_new {
+  background: gold !important; }
   .tist_moved_new:after {
     position: relative;
     top: 3px;
     left: 8px;
     display: inline-block;
-    content: '';
-    background: #9ACD32 !important;
+    content: "";
+    background: yellowgreen !important;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    z-index: 0;
-  }
+    z-index: 0; }
 
-.tist_new,.tist_dot_new {
-  background: #87CEEB !important;
-}
+.tist_new {
+  background: skyblue !important; }
 
+.tist_dot_new {
+  background: skyblue !important; }
   .tist_dot_new:after {
     position: relative;
     display: inline-block;
-    content: '';
-    background: #9ACD32 !important;
+    content: "";
+    background: yellowgreen !important;
     width: 13px;
     height: 13px;
     border-radius: 50%;
     z-index: 0;
-    -webkit-animation: testtest 1s infinite forwards;
-  }
+    -webkit-animation: readandnew 1s infinite forwards; }
 
-  @-webkit-keyframes testtest {
-    from,to { opacity: 1; }
-    50% { opacity: 0; }
-  }
+@-webkit-keyframes readandnew {
+  from, to {
+    opacity: 1; }
 
+  50% {
+    opacity: 0; } }
 tbody[id^=threadbits_forum] tr td.alt2:nth-child(2) {
-  position:relative;
-  z-index:-1;
-}
+  position: relative;
+  z-index: -1; }
 
-.thead,.tborder,.alt2.pbit {
-  border:none!important;
-}
+.thead, .tborder, .alt2.pbit {
+  border: none !important; }
