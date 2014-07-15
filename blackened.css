@@ -12,7 +12,8 @@
     padding: 0 !important; }
   .geshibox .li1, .geshibox .li2 {
     font-size: 14px !important;
-    background-color: #202021 !important; }
+    background-color: #222222 !important;
+    white-space: nowrap !important; }
   .geshibox pre > div {
     margin-top: 0 !important; }
 
@@ -124,8 +125,6 @@
 .xml .de1, .xml .de2 {
   color: #eeeeee !important; }
 
-.geshibox .li1 {
-  background: #202021 !important; }
 .geshibox .co1, .geshibox .coMULTI {
   color: #7a7a75 !important;
   font-style: italic; }

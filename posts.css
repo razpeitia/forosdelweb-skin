@@ -1,8 +1,13 @@
 @charset "UTF-8";
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+.cf:after {
+  clear: both; }
+
 #posts {
   padding-left: 0; }
 
-/*####### POST TITLE */
 #post_title {
   margin-top: 20px;
   padding: 0 20px 0 260px; }
@@ -13,16 +18,18 @@
     vertical-align: middle; }
     #post_title a:first-child {
       display: inline-block !important;
-      padding: 10px;
-      background: #999999;
-      border-radius: 5px;
-      font: 400 0.8rem "open sans" !important;
+      padding: 10px 15px;
+      background: #555555;
+      font: 400 0.9rem "open sans" !important;
       color: #eeeeee !important;
-      transition: background 0.3s, color 0.3s; }
+      text-transform: uppercase;
+      -moz-transition: background 0.3s;
+      -o-transition: background 0.3s;
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s; }
       #post_title a:first-child:hover {
         text-decoration: none;
-        background: #fae682;
-        color: #333333 !important; }
+        background: #111111; }
 
 #navbits_finallink_ltr {
   margin: 10px 0 0 !important;
@@ -30,7 +37,7 @@
   height: auto !important;
   background: none !important; }
 
-/* ######## BACKGROUND ADJUST */
+/* ######## BACKGROUND AND BORDER ADJUST */
 .row_post_content td:last-child {
   background: white !important; }
 
@@ -41,6 +48,9 @@
 
 .row_post_info td {
   padding: 20px !important; }
+
+td[id^=td_post_] td {
+  border: none !important; }
 
 .post_content {
   position: relative;
@@ -76,30 +86,51 @@
     background: #fae682 !important;
     color: black !important;
     text-decoration: none !important; }
-  .post_content .post_header {
-    overflow: hidden; }
-    .post_content .post_header .date_info {
-      float: left;
-      font-size: 12px;
-      margin-bottom: 20px; }
-      .post_content .post_header .date_info a:link {
-        background: none !important;
-        padding: 0 !important; }
 
-/* links */
-/* date and permalinks (post_header) */
-.date_info .postnew {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 60px solid yellowgreen;
-  border-left: 60px solid transparent;
-  background: none; }
-
-.post_links {
+table[id^=post] .post_header .date_info {
+  float: left;
+  font-size: 12px;
+  margin-bottom: 20px; }
+  table[id^=post] .post_header .date_info .postnew {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 60px solid yellowgreen;
+    border-left: 60px solid transparent;
+    background: none; }
+  table[id^=post] .post_header .date_info a:link {
+    background: none !important;
+    padding: 0 !important; }
+table[id^=post] .post_header .post_links {
+  position: relative;
+  top: -10px;
+  left: 30px;
   float: right; }
+  table[id^=post] .post_header .post_links a:first-of-type {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #cccccc !important;
+    border-radius: 50% !important;
+    opacity: 0.5; }
+    table[id^=post] .post_header .post_links a:first-of-type:hover {
+      opacity: 1; }
+  table[id^=post] .post_header .post_links a:last-of-type {
+    position: relative;
+    top: 15px;
+    left: -10px;
+    opacity: 0.5; }
+    table[id^=post] .post_header .post_links a:last-of-type:hover {
+      opacity: 1; }
+  table[id^=post] .post_header .post_links input {
+    position: relative;
+    top: 14px;
+    left: -20px; }
 
 /* code and inline-code */
 pre {
@@ -237,6 +268,15 @@ table[id^=post] + .vbmenu_popup {
     padding: 10px; }
   table[id^=post] + .vbmenu_popup .vbmenu_option a:hover, table[id^=post] + .vbmenu_popup .vbmenu_hilite a:hover {
     background: #555555; }
+
+td[id^=td_post] {
+  border-right: none !important;
+  -moz-transition: background 0.6s ease-out;
+  -o-transition: background 0.6s ease-out;
+  -webkit-transition: background 0.6s ease-out;
+  transition: background 0.6s ease-out; }
+  td[id^=td_post].mod_selected {
+    background: rgba(250, 230, 130, 0.5) !important; }
 
 /* post options */
 .quote-container {

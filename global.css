@@ -16,10 +16,10 @@ body {
   border-radius: 50%; }
 
 .tist_dot {
-  background: skyblue !important; }
+  background: #999999 !important; }
 
 .tist_lock {
-  background: indianred !important; }
+  background: crimson !important; }
 
 .tist {
   background: gainsboro !important; }
@@ -27,42 +27,29 @@ body {
 .tist_moved {
   background: gold !important; }
 
-.tist_moved_new {
-  background: gold !important; }
-  .tist_moved_new:after {
-    position: relative;
-    top: 3px;
-    left: 8px;
-    display: inline-block;
-    content: "";
-    background: yellowgreen !important;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    z-index: 0; }
-
 .tist_new {
-  background: skyblue !important; }
+  background: forestgreen !important; }
+
+.tist_moved_new {
+  background: gold !important;
+  -webkit-animation: moved_new 1s infinite forwards; }
 
 .tist_dot_new {
-  background: skyblue !important; }
-  .tist_dot_new:after {
-    position: relative;
-    display: inline-block;
-    content: "";
-    background: yellowgreen !important;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    z-index: 0;
-    -webkit-animation: readandnew 1s infinite forwards; }
+  background: #999999 !important;
+  -webkit-animation: dot_new 1s infinite forwards; }
 
-@-webkit-keyframes readandnew {
+@-webkit-keyframes moved_new {
   from, to {
-    opacity: 1; }
+    background: gold; }
 
   50% {
-    opacity: 0; } }
+    background: #999999; } }
+@-webkit-keyframes dot_new {
+  from, to {
+    background: forestgreen; }
+
+  50% {
+    background: #999999; } }
 tbody[id^=threadbits_forum] tr td.alt2:nth-child(2) {
   position: relative;
   z-index: -1; }
