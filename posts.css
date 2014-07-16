@@ -70,8 +70,12 @@ td[id^=td_post_] td {
     background-color: #cccccc !important;
     color: black !important;
     border-radius: 4px !important;
-    transition: all 0.4s !important;
-    padding: 3px 5px !important; }
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    -webkit-transition: background 0.4s;
+    transition: background 0.4s;
+    padding: 3px 5px !important;
+    text-decoration: none !important; }
   .post_content a:visited {
     display: inline-block !important;
     font-size: 0.8rem !important !important;
@@ -79,13 +83,15 @@ td[id^=td_post_] td {
     background-color: #cccccc !important;
     color: black !important;
     border-radius: 4px !important;
-    transition: all 0.4s !important;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    -webkit-transition: background 0.4s;
+    transition: background 0.4s;
     padding: 3px 5px !important;
     background-color: #eeeeee !important; }
   .post_content a:hover {
     background: #fae682 !important;
-    color: black !important;
-    text-decoration: none !important; }
+    color: black !important; }
 
 table[id^=post] .post_header .date_info {
   float: left;
@@ -108,6 +114,22 @@ table[id^=post] .post_header .post_links {
   top: -10px;
   left: 30px;
   float: right; }
+  table[id^=post] .post_header .post_links a:last-of-type {
+    position: relative;
+    top: 15px;
+    left: -10px;
+    opacity: 0;
+    -moz-transition: -moz-transform 0.4s ease-out 2s, background 0.4s, opacity 0.2s 2.2s;
+    -o-transition: -o-transform 0.4s ease-out 2s, background 0.4s, opacity 0.2s 2.2s;
+    -webkit-transition: -webkit-transform 0.4s ease-out, background 0.4s, opacity 0.2s;
+    -webkit-transition-delay: 2s, 0s, 2.2s;
+    transition: transform 0.4s ease-out 2s, background 0.4s, opacity 0.2s 2.2s; }
+    table[id^=post] .post_header .post_links a:last-of-type:hover {
+      opacity: 1;
+      -moz-transition: -moz-transform 0.4s ease-out, background 0.4s, opacity 0.2s;
+      -o-transition: -o-transform 0.4s ease-out, background 0.4s, opacity 0.2s;
+      -webkit-transition: -webkit-transform 0.4s ease-out, background 0.4s, opacity 0.2s;
+      transition: transform 0.4s ease-out, background 0.4s, opacity 0.2s; }
   table[id^=post] .post_header .post_links a:first-of-type {
     float: right;
     width: 50px;
@@ -115,23 +137,52 @@ table[id^=post] .post_header .post_links {
     line-height: 50px;
     text-align: center;
     font-size: 1.2rem;
-    background: #cccccc !important;
+    background: white !important;
     border-radius: 50% !important;
-    opacity: 0.5; }
-    table[id^=post] .post_header .post_links a:first-of-type:hover {
-      opacity: 1; }
-  table[id^=post] .post_header .post_links a:last-of-type {
-    position: relative;
-    top: 15px;
-    left: -10px;
-    opacity: 0.5; }
-    table[id^=post] .post_header .post_links a:last-of-type:hover {
-      opacity: 1; }
+    opacity: 0.5;
+    -moz-transition: background 0.4s !important;
+    -o-transition: background 0.4s !important;
+    -webkit-transition: background 0.4s !important;
+    transition: background 0.4s !important; }
+    table[id^=post] .post_header .post_links a:first-of-type:hover, table[id^=post] .post_header .post_links a:first-of-type:visited {
+      opacity: 1;
+      background: #eeeeee !important; }
+      table[id^=post] .post_header .post_links a:first-of-type:hover + a, table[id^=post] .post_header .post_links a:first-of-type:visited + a {
+        opacity: 1;
+        -moz-animation: blink 1s infinite;
+        -webkit-animation: blink 1s infinite;
+        animation: blink 1s infinite;
+        -moz-transform: rotate(-180deg) scale(1.5);
+        -ms-transform: rotate(-180deg) scale(1.5);
+        -webkit-transform: rotate(-180deg) scale(1.5);
+        transform: rotate(-180deg) scale(1.5);
+        -moz-transition: -moz-transform 0.4s ease-out, background 0.3s, opacity 0.2s;
+        -o-transition: -o-transform 0.4s ease-out, background 0.3s, opacity 0.2s;
+        -webkit-transition: -webkit-transform 0.4s ease-out, background 0.3s, opacity 0.2s;
+        transition: transform 0.4s ease-out, background 0.3s, opacity 0.2s; }
   table[id^=post] .post_header .post_links input {
     position: relative;
     top: 14px;
     left: -20px; }
 
+@-moz-keyframes blink {
+  from, to {
+    background: #eeeeee; }
+
+  50% {
+    background: gold; } }
+@-webkit-keyframes blink {
+  from, to {
+    background: #eeeeee; }
+
+  50% {
+    background: gold; } }
+@keyframes blink {
+  from, to {
+    background: #eeeeee; }
+
+  50% {
+    background: gold; } }
 /* code and inline-code */
 pre {
   font-family: monaco !important;
