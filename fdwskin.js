@@ -61,8 +61,8 @@ $(function() {
     });
 
     // añadir clases a los enlaces de las opciones (citar, editar, etc)
-    $('.row_post_options td:nth-child(2) a[href*=editpost]').addClass('edit_post');
-    $('.row_post_options td:nth-child(2) a[href*=newreply]').addClass('quote_post');
+    $('.row_post_options td:nth-child(2) a[href*=editpost]').addClass('post_option_link edit_post');
+    $('.row_post_options td:nth-child(2) a[href*=newreply]').addClass('post_option_link quote_post');
     $('.row_post_options td:nth-child(2) a[href*=newreply] img[src*=multiquote]').parent().addClass('multi');
     $('.row_post_options td:nth-child(2) a[href*=newreply] img[src*=quickreply]').parent().addClass('fast');
 
@@ -81,11 +81,17 @@ $(function() {
     $('#post_page_header').children('div').children('div').children('.tborder').eq(0).empty()
     $('#posts').prepend('<div id="post_title">'+post_forum.replace(/»/,'') + post_title_link+'</div>');
     $('#navbits_finallink_ltr').prepend(post_title_text);
+
+    // change 'iniciado por' for 'escribió'
+    $('.quote_text_container > span').html(function(index,html){
+      return html.replace('Iniciado por','escribió:');
+    });
     
     // #### COSITAS ######
     // mostrar/ocultar citas
     $('.quote_text_container').click(function(e){
       $(this).children('.quote-text').slideToggle();
+      $(this).toggleClass('open');
       e.stopPropagation()
     })
 
