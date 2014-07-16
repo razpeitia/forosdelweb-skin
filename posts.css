@@ -505,6 +505,8 @@ td[id^=td_post] {
       display: block;
       width: 100% !important;
       height: 100% !important; }
+    .row_post_options td:nth-child(2) .love > div:first-child a {
+      z-index: 9; }
   .row_post_options td:nth-child(2) .love > div:last-child span, .row_post_options td:nth-child(2) .love > div:last-child a {
     position: absolute;
     top: 0;
@@ -512,7 +514,7 @@ td[id^=td_post] {
     width: 100% !important;
     height: 100% !important; }
   .row_post_options td:nth-child(2) .love > div:last-child span {
-    z-index: 2;
+    z-index: 10;
     color: transparent;
     top: 35px;
     right: 21px;
@@ -525,6 +527,8 @@ td[id^=td_post] {
     color: #dddddd !important;
     border-radius: 50%;
     border: 3px solid white; }
+    .row_post_options td:nth-child(2) .love > div:last-child a:hover {
+      background: green; }
 
 @-moz-keyframes vive {
   from, 10%, 20%, 30%, to {
