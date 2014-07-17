@@ -61,10 +61,10 @@ $(function() {
     });
 
     // añadir clases a los enlaces de las opciones (citar, editar, etc)
-    $('.row_post_options td:nth-child(2) a[href*=editpost]').addClass('post_option_link edit_post');
-    $('.row_post_options td:nth-child(2) a[href*=newreply]').addClass('post_option_link quote_post');
-    $('.row_post_options td:nth-child(2) a[href*=newreply] img[src*=multiquote]').parent().addClass('multi');
-    $('.row_post_options td:nth-child(2) a[href*=newreply] img[src*=quickreply]').parent().addClass('fast');
+    $('.row_post_options td:nth-child(2) a[href*=editpost]').addClass('post_option_link edit_post').attr('title','Editar');
+    $('.row_post_options td:nth-child(2) a[href*=newreply]').addClass('post_option_link quote_post').attr('title','Citar');
+    $('.row_post_options td:nth-child(2) a[href*=newreply] img[src*=multiquote]').parent().addClass('multi').attr('title','Seleccionar para multicita');;
+    $('.row_post_options td:nth-child(2) a[href*=newreply] img[src*=quickreply]').parent().addClass('fast').attr('title','Citar en respuesta rápida');;
 
     // ocultar "este mensaje me gustó" (ya está el +1)
     $('.row_post_options div.smallfont > a[id^=fdwvotepos_like]').parent().hide();
