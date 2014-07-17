@@ -5,7 +5,7 @@ $(function() {
   // matching threads
   if(url.match(/\/f([0-9]+)\/(.+)-([0-9]+)/)) {
 
-    // añadir clases
+    // add class to user profile cell
     $('div[id^=postmenu_]').parent().addClass('user_profile');
 
     // añadir clases para cuadro de usuario
@@ -71,6 +71,12 @@ $(function() {
 
     // añadir clase al +1
     $('.row_post_options td:nth-child(2)>div>div>span[id^=fdwvotepos_]').parent().parent().addClass('love');
+
+    // adding ids to top tables
+    $('#poststop + table').attr('id','response_button_container');
+    $('#poststop ~ table.tborder').attr('id','thread_header_options');
+    var unreaded_posts = $('table#thread_header_options tr td.tcat div.smallfont').html();
+    $('table#thread_header_options tr td:first-child').remove()
 
     // extract and create post header
     $('body > br + div[align=center]').attr('id','post_page_header')

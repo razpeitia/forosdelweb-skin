@@ -8,11 +8,41 @@
 #posts {
   padding-left: 0; }
 
-/* ############## */
-/* # Post title # */
-/* ############## */
+/* ################ */
+/* # Thread title # */
+/* ################ */
+table#thread_header_options {
+  position: absolute;
+  right: 20px;
+  top: 117px;
+  border: none !important;
+  background: none !important; }
+  table#thread_header_options * {
+    border: none !important; }
+  table#thread_header_options td {
+    padding: 0 !important;
+    background: none !important; }
+    table#thread_header_options td:first-child {
+      z-index: 1; }
+    table#thread_header_options td a {
+      display: block;
+      padding: 10px;
+      background: #bbbbbb;
+      color: #eeeeee;
+      font: 400 0.9rem Open Sans;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      -moz-transition: background 0.3s;
+      -o-transition: background 0.3s;
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s; }
+      table#thread_header_options td a:hover {
+        background: #333333; }
+    table#thread_header_options td img {
+      display: none; }
+
 #post_title {
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 0 20px 0 260px; }
   #post_title a {
     display: block !important;
@@ -21,7 +51,7 @@
     vertical-align: middle; }
     #post_title a:first-child {
       display: inline-block !important;
-      padding: 10px 15px;
+      padding: 10px;
       background: #555555;
       font: 400 0.9rem "open sans" !important;
       color: #eeeeee !important;
@@ -35,7 +65,7 @@
         background: #111111; }
 
 #navbits_finallink_ltr {
-  margin: 10px 0 0 !important;
+  margin: 20px 0 30px !important;
   width: auto !important;
   height: auto !important;
   background: none !important; }
@@ -50,7 +80,7 @@
   padding: 0; }
 
 .row_post_info td {
-  padding: 20px !important; }
+  padding: 0 !important; }
 
 td[id^=td_post_] td {
   border: none !important; }
@@ -241,8 +271,11 @@ pre {
   opacity: 1; }
 
 /*######### USER PROFILE */
+tr.row_post_info td:first-child,
 td.user_profile {
-  width: 240px !important;
+  width: 240px !important; }
+
+td.user_profile {
   text-align: right;
   position: relative;
   font-family: open sans;
