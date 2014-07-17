@@ -92,6 +92,10 @@ $(function() {
     $('.quote_text_container > span').html(function(index,html){
       return html.replace('Iniciado por','escribió:');
     });
+
+    // fix scrolling to hash
+    var hash = window.location.hash
+    if(hash) $(window).scrollTop($(hash).offset().top-40)
     
     // #### COSITAS ######
     // mostrar/ocultar citas
