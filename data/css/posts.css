@@ -356,9 +356,16 @@ td.user_profile {
     -webkit-transform: translateX(50%);
     -moz-transform: translateX(50%);
     transform: translateX(50%); }
+  td.user_profile:hover .user_info div.tag {
+    opacity: 1; }
   td.user_profile .user_info div.tag {
     display: block;
-    margin: 5px 0; }
+    margin: 5px 0;
+    opacity: 0.6;
+    -moz-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s; }
     td.user_profile .user_info div.tag a {
       position: relative;
       display: inline-block;
