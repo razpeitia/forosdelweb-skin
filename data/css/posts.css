@@ -252,12 +252,12 @@ table[id^=post] .post_header .post_links {
     background: gold; } }
 /* code and inline-code */
 pre {
-  font-family: monaco !important;
+  font-family: monaco, "andale mono", monospace !important;
   font-size: 14px !important; }
 
 .post_content code {
   display: inline-block;
-  font-family: monaco !important;
+  font-family: monaco, "andale mono", monospace !important;
   font-size: 12px !important;
   background: white !important;
   border-radius: 4px;
@@ -483,7 +483,7 @@ table[id^=post] + .vbmenu_popup {
   .quote_text_container:before, .quote_text_container:after {
     position: absolute;
     font-size: 7rem;
-    font-family: monaco;
+    font-family: monaco, "andale mono", monospace;
     color: #cccccc;
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);

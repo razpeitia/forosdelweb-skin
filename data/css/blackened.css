@@ -145,7 +145,7 @@
 .geshibox [lang=javascript] .me1, .geshibox .javascript .me1 {
   color: #505e80 !important; }
 .geshibox .text .de1, .geshibox .text .de2 {
-  font-family: monospace, monaco; }
+  font-family: monaco, "andale mono", monospace; }
 .geshibox .alt2, .geshibox .alt2Active, .geshibox pre {
   background: none !important;
   color: #eeeeee !important; }
