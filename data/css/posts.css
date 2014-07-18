@@ -518,13 +518,17 @@ table[id^=post] + .vbmenu_popup {
     -webkit-transition: -webkit-transform 0.2s ease-out;
     transition: transform 0.2s ease-out; }
   .row_post_options td:nth-child(2) a.post_option_link.edit_post:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/edit.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/edit.png") !important;
+    background-image: url("../images/edit.png") !important; }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quote.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quote.png") !important;
+    background-image: url("../images/quote.png") !important; }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png") !important;
+    background-image: url("../images/multi.png") !important; }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.fast:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quick.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quick.png") !important;
+    background-image: url("../images/quick.png") !important; }
 .row_post_options td:nth-child(2) .love {
   position: relative;
   top: -40px;
@@ -562,6 +566,7 @@ table[id^=post] + .vbmenu_popup {
     width: 32px;
     height: 32px;
     background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/love.png") !important;
+    background-image: url("../images/love.png") !important;
     background-size: cover;
     -webkit-filter: grayscale(1);
     -moz-transition: -moz-transform 0.2s ease-out, -webkit-filter 0.1s;
