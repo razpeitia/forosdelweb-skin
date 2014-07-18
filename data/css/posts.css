@@ -44,7 +44,7 @@ table#thread_header_options {
 #post_title {
   position: relative;
   margin: 20px 0;
-  padding: 0 20px 0 260px; }
+  padding: 0 20px 0 265px; }
   #post_title a {
     display: block !important;
     font: 600 2.2rem "open sans", serif !important;
@@ -309,7 +309,8 @@ td.user_profile {
   text-align: right;
   position: relative;
   font-family: open sans;
-  padding: 60px 20px 20px; }
+  padding: 60px 20px 20px;
+  /* tags */ }
   td.user_profile.is_modcol {
     border-right: 4px solid #fae682 !important; }
     td.user_profile.is_modcol.is_col {
@@ -359,21 +360,56 @@ td.user_profile {
     display: block;
     margin: 5px 0; }
     td.user_profile .user_info div.tag a {
+      position: relative;
       display: inline-block;
-      color: white !important;
+      padding: 0;
+      background: #6fa831;
+      color: #c4e0a6 !important;
       text-transform: uppercase;
-      font: 400 0.7rem Open Sans !important; }
-      td.user_profile .user_info div.tag a span.name {
-        display: inline-block;
-        padding: 6px;
-        background: rgba(0, 128, 0, 0.7);
-        border-radius: 5px 0 0 5px; }
-      td.user_profile .user_info div.tag a span.count {
-        display: inline-block;
-        padding: 6px;
-        background: rgba(0, 128, 0, 0.5);
-        color: #004d00;
-        border-radius: 0 5px 5px 0; }
+      font: 400 0.55rem Open Sans !important;
+      border-radius: 5px;
+      -moz-transition: -moz-transform 0.1s ease-out;
+      -o-transition: -o-transform 0.1s ease-out;
+      -webkit-transition: -webkit-transform 0.1s ease-out;
+      transition: transform 0.1s ease-out; }
+      td.user_profile .user_info div.tag a span {
+        display: inline-block; }
+        td.user_profile .user_info div.tag a span.name {
+          padding: 3px;
+            padding-left: 5px;
+          border-radius: 5px 0 0 5px; }
+        td.user_profile .user_info div.tag a span.count {
+          padding: 3px;
+            padding-right: 4px;
+          color: #004d00 !important;
+          background: #98bf6d;
+          border-radius: 0 5px 5px 0;
+          border: 1px solid #6fa831;
+            border-border-left: 0; }
+      td.user_profile .user_info div.tag a:hover {
+        z-index: 9999;
+        background: black;
+        -moz-transition: -moz-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
+        -o-transition: -o-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
+        -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0;
+        -webkit-transition-delay: 0s, 150ms;
+        transition: transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
+        -moz-transform: scale(2, 2);
+        -ms-transform: scale(2, 2);
+        -webkit-transform: scale(2, 2);
+        transform: scale(2, 2); }
+        td.user_profile .user_info div.tag a:hover span {
+          color: #eeeeee !important;
+          border-color: black;
+          -moz-transition: all 0 150ms;
+          -o-transition: all 0 150ms;
+          -webkit-transition: all 0;
+          -webkit-transition-delay: 150ms;
+          transition: all 0 150ms; }
+          td.user_profile .user_info div.tag a:hover span.name {
+            background: black; }
+          td.user_profile .user_info div.tag a:hover span.count {
+            background: #555555; }
 
 /* popup */
 table[id^=post] + .vbmenu_popup {
@@ -518,17 +554,13 @@ table[id^=post] + .vbmenu_popup {
     -webkit-transition: -webkit-transform 0.2s ease-out;
     transition: transform 0.2s ease-out; }
   .row_post_options td:nth-child(2) a.post_option_link.edit_post:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/edit.png") !important;
-    background-image: url("../images/edit.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/edit.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quote.png") !important;
-    background-image: url("../images/quote.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quote.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png") !important;
-    background-image: url("../images/multi.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.fast:after {
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quick.png") !important;
-    background-image: url("../images/quick.png") !important; }
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quick.png"); }
 .row_post_options td:nth-child(2) .love {
   position: relative;
   top: -40px;
@@ -565,8 +597,7 @@ table[id^=post] + .vbmenu_popup {
     left: 24px;
     width: 32px;
     height: 32px;
-    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/love.png") !important;
-    background-image: url("../images/love.png") !important;
+    background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/love.png");
     background-size: cover;
     -webkit-filter: grayscale(1);
     -moz-transition: -moz-transform 0.2s ease-out, -webkit-filter 0.1s;
@@ -633,6 +664,17 @@ table[id^=post] + .vbmenu_popup {
     -ms-transform: scale(1.6, 1.6);
     -webkit-transform: scale(1.6, 1.6);
     transform: scale(1.6, 1.6); } }
+@-moz-document url-prefix() {
+  .row_post_options td:nth-child(2) a.post_option_link.edit_post:after {
+    background-image: url(../images/edit.png); }
+  .row_post_options td:nth-child(2) a.post_option_link.quote_post:after {
+    background-image: url(../images/quote.png); }
+  .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi:after {
+    background-image: url(../images/multi.png); }
+  .row_post_options td:nth-child(2) a.post_option_link.quote_post.fast:after {
+    background-image: url(../images/quick.png); }
+  .row_post_options td:nth-child(2) a.post_option_link .love:after {
+    background-image: url(../images/quick.png); } }
 td[id^=td_post] {
   border-right: none !important;
   -moz-transition: background 0.6s ease-out;
