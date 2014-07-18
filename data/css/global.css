@@ -8,21 +8,40 @@
   font-style: normal; }
 @font-face {
   font-family: "open sans";
-  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/bold.ttf") format("truetype"), url("..d__/data/fonts/opensans/bold.woff") format("woff");
+  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/bold.ttf") format("truetype"), url("../data/fonts/opensans/bold.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: "open sans";
-  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/italic.ttf") format("truetype"), url(".._/data/fonts/opensans/italic.woff") format("woff");
+  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/italic.ttf") format("truetype"), url("../data/fonts/opensans/italic.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 strong, b {
   font-weight: 600; }
 
 body {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
+  position: relative;
   background: #f0f0f0 !important; }
+  body:before {
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: #f0f0f0;
+      background-image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif);
+      background-repeat: no-repeat;
+      background-position: center 200px; }
+  body.skinned:before {
+    z-index: -1;
+    background: transparent;
+    -moz-transition: background 0.4s ease-out, z-index 0 0.4s;
+    -o-transition: background 0.4s ease-out, z-index 0 0.4s;
+    -webkit-transition: background 0.4s ease-out, z-index 0;
+    -webkit-transition-delay: 0s, 0.4s;
+    transition: background 0.4s ease-out, z-index 0 0.4s; }
 
 #user_head > img {
   border-radius: 50%; }

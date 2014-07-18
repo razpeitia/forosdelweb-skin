@@ -132,6 +132,6 @@ $(function() {
   }
 
   // Mostrar body
-  $('body').css('opacity', '1');
+  $('body').addClass('skinned')
 
 });
