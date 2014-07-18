@@ -7,15 +7,15 @@
 
   "content_scripts": [{
     "matches": ["http://www.forosdelweb.com/*"],
-    "css": ["global.css","posts.css","blackened.css"],
-    "js": ["jquery.min.js", "fdwskin.js"]
+    "css": ["data/css/global.css","data/css/posts.css","data/css/blackened.css"],
+    "js": ["data/js/jquery.min.js", "data/js/fdwskin.js"]
     }],
 
   "web_accessible_resources": [
-       "images/*.png"
+       "data/images/*.png"
   	],
 
   "icons": {
-    "128": "icons/fdw.png"
+    "128": "data/icons/fdw.png"
   	}
 }
