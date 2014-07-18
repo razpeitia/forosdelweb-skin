@@ -1,13 +1,21 @@
+/* ######### */
+/* # Fonts # */
+/* ######### */
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+  font-family: "open sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/regular.ttf") format("truetype"), url("../data/fonts/opensans/regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format("woff"); }
+  font-family: "open sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/bold.ttf") format("truetype"), url("..d__/data/fonts/opensans/bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "open sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/data/fonts/opensans/italic.ttf") format("truetype"), url(".._/data/fonts/opensans/italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
 strong, b {
   font-weight: 600; }
 

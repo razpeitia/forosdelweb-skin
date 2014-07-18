@@ -12,7 +12,8 @@
     }],
 
   "web_accessible_resources": [
-       "data/images/*.png"
+       "data/images/*.png",
+       "data/fonts/*"
   	],
 
   "icons": {
