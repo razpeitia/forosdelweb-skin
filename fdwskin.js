@@ -23,6 +23,19 @@ $(function() {
       if ($(this).children('strong').length>0) $(this).addClass('user_info');
     });
 
+    // adding classes to tags in user profile
+    $('.user_info div a[href*=tags]').parent().addClass('tag')
+
+    // clear and insert tag counting inside tag anchor
+    $('.user_info div.tag').each(function(){
+      var tag = $(this).children('a').text();
+      var anchor = $(this).children('a').attr('href');
+      var tag_count = $(this).text().match(/\d+/g);
+      $(this).empty();
+      $(this).append('<a href="'+anchor+'"><span class="name">'+tag+'</span></a>');
+      $(this).children('a').append('<span class="count">'+tag_count+'</span>');
+    })
+
     // añadir clases para filas del post
     $('.user_profile table[id^=post] tbody tr:nth-child(1)').addClass('row_post_info');
     $('.user_profile table[id^=post] tbody tr:nth-child(2)').addClass('row_post_content');

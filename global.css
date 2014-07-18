@@ -16,6 +16,9 @@ body {
   transition: opacity 0.4s ease-out;
   background: #f0f0f0 !important; }
 
+#user_head > img {
+  border-radius: 50%; }
+
 .threadsticon {
   position: relative;
   left: 15px;
