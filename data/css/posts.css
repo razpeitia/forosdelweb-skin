@@ -673,7 +673,7 @@ table[id^=post] + .vbmenu_popup {
     background-image: url(../images/multi.png); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.fast:after {
     background-image: url(../images/quick.png); }
-  .row_post_options td:nth-child(2) a.post_option_link .love:after {
+  .row_post_options td:nth-child(2) .love:after {
     background-image: url(../images/love.png); } }
 td[id^=td_post] {
   border-right: none !important;
