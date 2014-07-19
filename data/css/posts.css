@@ -89,6 +89,10 @@ table#thread_header_options {
         #post_title a:first-child:hover:after {
           border-left-color: #111111; }
 
+#response_button_container {
+  position: relative;
+  top: -31px; }
+
 #navbits_finallink_ltr {
   margin: 20px 0 30px !important;
   width: auto !important;
@@ -564,6 +568,8 @@ table[id^=post] + .vbmenu_popup {
     background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/edit.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post:after {
     background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quote.png"); }
+  .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi.selected {
+    background-color: rgba(255, 215, 0, 0.5); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi:after {
     background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.fast:after {
