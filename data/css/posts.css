@@ -316,7 +316,7 @@ td.user_profile {
   padding: 60px 20px 20px;
   /* tags */ }
   td.user_profile.is_modcol {
-    border-right: 4px solid #f0dc28 !important; }
+    border-right: 4px solid black !important; }
     td.user_profile.is_modcol.is_col {
       border-right: 4px solid #cccccc !important; }
     td.user_profile.is_modcol.is_banned {
@@ -337,8 +337,8 @@ td.user_profile {
     display: inline-block;
     margin-top: 5px;
     border-radius: 5px 0 0 5px;
-    color: #333333;
-    background: #f0dc28;
+    color: white;
+    background: black;
     padding: 8px 20px 8px 10px; }
   td.user_profile.is_banned .cartelito_modcol {
     color: firebrick; }
@@ -347,7 +347,8 @@ td.user_profile {
     /* half of border */ }
   td.user_profile.is_modcol.is_col .cartelito_modcol {
     text-transform: lowercase;
-    background: #cccccc; }
+    background: #cccccc;
+    color: black; }
   td.user_profile .smallfont.user_avatar {
     position: absolute;
     top: 15px;
@@ -380,6 +381,11 @@ td.user_profile {
       text-transform: uppercase;
       font: 400 0.6rem Open Sans !important;
       border-radius: 5px;
+      -moz-transition: background 1s ease-out 5s, color 1s ease-out 5s;
+      -o-transition: background 1s ease-out 5s, color 1s ease-out 5s;
+      -webkit-transition: background 1s ease-out, color 1s ease-out;
+      -webkit-transition-delay: 5s, 5s;
+      transition: background 1s ease-out 5s, color 1s ease-out 5s;
       -moz-transform-origin: 10px 12px 0 50%;
       -ms-transform-origin: 10px 12px 0 50%;
       -webkit-transform-origin: 10px 12px 0 50%;
@@ -394,7 +400,12 @@ td.user_profile {
         border-radius: 50%;
         content: ""; }
       td.user_profile .user_info div.tag a span {
-        display: inline-block; }
+        display: inline-block;
+        -moz-transition: background 1s ease-out 5s, color 1s ease-out 5s;
+        -o-transition: background 1s ease-out 5s, color 1s ease-out 5s;
+        -webkit-transition: background 1s ease-out, color 1s ease-out;
+        -webkit-transition-delay: 5s, 5s;
+        transition: background 1s ease-out 5s, color 1s ease-out 5s; }
         td.user_profile .user_info div.tag a span.name {
           padding: 3px;
             padding-right: 5px; }
@@ -409,11 +420,11 @@ td.user_profile {
       -moz-animation: clipclap 0.6s;
       -webkit-animation: clipclap 0.6s;
       animation: clipclap 0.6s;
-      -moz-transition: background 90ms 540ms;
-      -o-transition: background 90ms 540ms;
-      -webkit-transition: background 90ms;
-      -webkit-transition-delay: 540ms;
-      transition: background 90ms 540ms; }
+      -moz-transition: background 90ms 540ms, color 1s ease-out 5s;
+      -o-transition: background 90ms 540ms, color 1s ease-out 5s;
+      -webkit-transition: background 90ms, color 1s ease-out;
+      -webkit-transition-delay: 540ms, 5s;
+      transition: background 90ms 540ms, color 1s ease-out 5s; }
       td.user_profile .user_info div.tag:hover a span {
         color: #eeeeee !important;
         border-color: black;
@@ -422,8 +433,6 @@ td.user_profile {
         -webkit-transition: all 90ms;
         -webkit-transition-delay: 540ms;
         transition: all 90ms 540ms; }
-        td.user_profile .user_info div.tag:hover a span.name {
-          background: black; }
         td.user_profile .user_info div.tag:hover a span.count {
           background: #555555; }
 
