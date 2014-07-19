@@ -1,7 +1,7 @@
 /* Library extension
 // Description: easy cookie management
 // Dependencies: core.js
-// zerokillex@gmail.com
+// zerokillex@yahoo.com
 */
 // query a value from an escape or unescape string pair name/value;
 // UPDATED: July 21, 2009 0:12
