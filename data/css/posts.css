@@ -316,9 +316,9 @@ td.user_profile {
   padding: 60px 20px 20px;
   /* tags */ }
   td.user_profile.is_modcol {
-    border-right: 4px solid #fae682 !important; }
+    border-right: 4px solid #f0dc28 !important; }
     td.user_profile.is_modcol.is_col {
-      border-right: 4px solid #dddddd !important; }
+      border-right: 4px solid #cccccc !important; }
     td.user_profile.is_modcol.is_banned {
       border-right: none !important; }
       td.user_profile.is_modcol.is_banned * {
@@ -338,13 +338,8 @@ td.user_profile {
     margin-top: 5px;
     border-radius: 5px 0 0 5px;
     color: #333333;
-    background: #fae682;
+    background: #f0dc28;
     padding: 8px 20px 8px 10px; }
-  td.user_profile .smallfont.user_avatar {
-    position: absolute;
-    top: 15px;
-    right: 0;
-    z-index: 1; }
   td.user_profile.is_banned .cartelito_modcol {
     color: firebrick; }
   td.user_profile.is_modcol:not(.is_banned) .smallfont.user_avatar {
@@ -352,7 +347,12 @@ td.user_profile {
     /* half of border */ }
   td.user_profile.is_modcol.is_col .cartelito_modcol {
     text-transform: lowercase;
-    background: #dddddd; }
+    background: #cccccc; }
+  td.user_profile .smallfont.user_avatar {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    z-index: 1; }
   td.user_profile .smallfont.user_avatar a {
     display: block;
     border-radius: 50%;
@@ -373,55 +373,88 @@ td.user_profile {
     td.user_profile .user_info div.tag a {
       position: relative;
       display: inline-block;
-      padding: 0;
-      background: #6fa831;
-      color: #c4e0a6 !important;
+      padding: 3px;
+        padding-left: 15px;
+      background: #f0dc28;
+      color: #a6970c !important;
       text-transform: uppercase;
-      font: 400 0.55rem Open Sans !important;
+      font: 400 0.6rem Open Sans !important;
       border-radius: 5px;
-      -moz-transition: -moz-transform 0.1s ease-out;
-      -o-transition: -o-transform 0.1s ease-out;
-      -webkit-transition: -webkit-transform 0.1s ease-out;
-      transition: transform 0.1s ease-out; }
+      -moz-transform-origin: 10px 12px 0 50%;
+      -ms-transform-origin: 10px 12px 0 50%;
+      -webkit-transform-origin: 10px 12px 0 50%;
+      transform-origin: 10px 12px 0 50%; }
+      td.user_profile .user_info div.tag a:before {
+        position: absolute;
+        top: 9px;
+        left: 7px;
+        width: 6px;
+        height: 6px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        content: ""; }
       td.user_profile .user_info div.tag a span {
         display: inline-block; }
         td.user_profile .user_info div.tag a span.name {
           padding: 3px;
-            padding-left: 5px;
-          border-radius: 5px 0 0 5px; }
+            padding-right: 5px; }
         td.user_profile .user_info div.tag a span.count {
           padding: 3px;
-            padding-right: 4px;
-          color: #004d00 !important;
-          background: #98bf6d;
-          border-radius: 0 5px 5px 0;
-          border: 1px solid #6fa831;
-            border-border-left: 0; }
-      td.user_profile .user_info div.tag a:hover {
-        z-index: 9999;
-        background: black;
-        -moz-transition: -moz-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
-        -o-transition: -o-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
-        -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0;
-        -webkit-transition-delay: 0s, 150ms;
-        transition: transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
-        -moz-transform: scale(1.2, 1.2);
-        -ms-transform: scale(1.2, 1.2);
-        -webkit-transform: scale(1.2, 1.2);
-        transform: scale(1.2, 1.2); }
-        td.user_profile .user_info div.tag a:hover span {
-          color: #eeeeee !important;
-          border-color: black;
-          -moz-transition: all 0 150ms;
-          -o-transition: all 0 150ms;
-          -webkit-transition: all 0;
-          -webkit-transition-delay: 150ms;
-          transition: all 0 150ms; }
-          td.user_profile .user_info div.tag a:hover span.name {
-            background: black; }
-          td.user_profile .user_info div.tag a:hover span.count {
-            background: #555555; }
+          color: #a6970c !important;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 5px; }
+    td.user_profile .user_info div.tag:hover a {
+      z-index: 9999;
+      background: black;
+      -moz-animation: clipclap 0.6s;
+      -webkit-animation: clipclap 0.6s;
+      animation: clipclap 0.6s;
+      -moz-transition: background 90ms 540ms;
+      -o-transition: background 90ms 540ms;
+      -webkit-transition: background 90ms;
+      -webkit-transition-delay: 540ms;
+      transition: background 90ms 540ms; }
+      td.user_profile .user_info div.tag:hover a span {
+        color: #eeeeee !important;
+        border-color: black;
+        -moz-transition: all 90ms 540ms;
+        -o-transition: all 90ms 540ms;
+        -webkit-transition: all 90ms;
+        -webkit-transition-delay: 540ms;
+        transition: all 90ms 540ms; }
+        td.user_profile .user_info div.tag:hover a span.name {
+          background: black; }
+        td.user_profile .user_info div.tag:hover a span.count {
+          background: #555555; }
 
+@-moz-keyframes clipclap {
+  from {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes clipclap {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes clipclap {
+  from {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 /* popup */
 table[id^=post] + .vbmenu_popup {
   left: 270px !important;
