@@ -118,10 +118,17 @@ $(function() {
       e.stopPropagation()
     })
 
-    // Marcar multicita
+    // mark multiquote on click
     $('.row_post_options a.quote_post.multi').click(function(){
       $(this).toggleClass('selected');
     })
+
+    // mark multiquotes saved in cookie
+    var multiquote = Cookie.query().vbulletin_multiquote;
+      if (multiquote){
+      multiquote = multiquote.split(",");
+      for (var idx = 0, len = multiquote.length; idx < len; idx++) $("#mq_"+ multiquote[idx]).parent().addClass("selected");
+    }
 
     // Marcar post como seleccionado (mods)
     $('.post_links input').click(function(){
@@ -139,6 +146,15 @@ $(function() {
     // change triangle/heart
     where_is_my_heart = /Firefox/i.test(navigator.userAgent) ? '../images/love.png' : 'chrome-extension://'+chrome.runtime.id+'/data/images/love.png'
     $('img[src="http://static.forosdelweb.com/fdwtheme/images/buttons/up.png"]').attr('src',where_is_my_heart)
+
+    // activity indicator
+    $('a[href^="http://www.forosdelweb.com/misc.php?do=whoposted&t="]').each(function() {
+      var count = $(this).text()
+      var parent = $(this).parent().prev()
+      if(count>49) parent.addClass('burn')
+      else if(count>25) parent.addClass('hot')
+      else if(count>9) parent.addClass('warm')
+    });
 
     // add spacers
     $('tbody[id^=threadbits_forum] tr').before('<tr class="spacer"><td colspan="6"><div></div></td></tr>')
