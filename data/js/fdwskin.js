@@ -30,7 +30,7 @@ $(function() {
     $('.user_info div.tag').each(function(){
       var tag = $(this).children('a').text();
       var anchor = $(this).children('a').attr('href');
-      var tag_count = $(this).text().match(/\d+/g);
+      var tag_count = $(this).text().replace(tag,'').match(/\d+/g);
       $(this).empty();
       $(this).append('<a href="'+anchor+'"><span class="name">'+tag+'</span></a>');
       $(this).children('a').append('<span class="count">'+tag_count+'</span>');
@@ -119,15 +119,29 @@ $(function() {
     })
 
     // Marcar multicita
-    // TODO: no funciona
     $('.row_post_options a.quote_post.multi').click(function(){
-      $(this).toggleClass('active');
+      $(this).toggleClass('selected');
     })
 
     // Marcar post como seleccionado (mods)
     $('.post_links input').click(function(){
       $(this).parent().parent().parent().parent().toggleClass('mod_selected')
     })
+
+  }
+
+  // matching forums
+  if(url.match(/\/f([0-9]+)\//)) {
+
+    // killing thread row title titles
+    $('tbody[id^=threadbits_forum] tr td:nth-child(3)').removeAttr('title')
+
+    // change triangle/heart
+    where_is_my_heart = /Firefox/i.test(navigator.userAgent) ? '../images/love.png' : 'chrome-extension://'+chrome.runtime.id+'/data/images/love.png'
+    $('img[src="http://static.forosdelweb.com/fdwtheme/images/buttons/up.png"]').attr('src',where_is_my_heart)
+
+    // add spacers
+    $('tbody[id^=threadbits_forum] tr').before('<tr class="spacer"><td colspan="6"><div></div></td></tr>')
 
   }
 

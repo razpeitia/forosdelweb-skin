@@ -3,11 +3,11 @@
 
   "name": "Foros Del Web Skin",
   "description": "Skin para forosdelweb.com",
-  "version": "1.0.5",
+  "version": "1.1.0",
 
   "content_scripts": [{
     "matches": ["http://www.forosdelweb.com/*"],
-    "css": ["data/css/global.css","data/css/posts.css","data/css/blackened.css"],
+    "css": ["data/css/global.css","data/css/posts.css","data/css/blackened.css","data/css/threads.css"],
     "js": ["data/js/jquery.min.js", "data/js/fdwskin.js", "data/js/cookies.js", "data/js/fdwusability.js"]
     }],
 

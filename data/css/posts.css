@@ -405,10 +405,10 @@ td.user_profile {
         -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0;
         -webkit-transition-delay: 0s, 150ms;
         transition: transform 0.2s cubic-bezier(0.1, 0.7, 1, 3), background 0 150ms;
-        -moz-transform: scale(2, 2);
-        -ms-transform: scale(2, 2);
-        -webkit-transform: scale(2, 2);
-        transform: scale(2, 2); }
+        -moz-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        -webkit-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2); }
         td.user_profile .user_info div.tag a:hover span {
           color: #eeeeee !important;
           border-color: black;
