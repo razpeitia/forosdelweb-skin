@@ -156,6 +156,16 @@ $(function() {
       else if(count>9) parent.addClass('warm')
     });
 
+    // check if thread is a post-it
+    $('tbody[id^=threadbits_forum] tr').each(function(){
+      if ($(this).find('img[src$="/images/misc/sticky.gif"]').length) {
+        $(this).addClass('postit');
+      }
+    })
+
+    $('tr.postit:last').addClass('last_postit')
+
+
     // add spacers
     $('tbody[id^=threadbits_forum] tr').before('<tr class="spacer"><td colspan="6"><div></div></td></tr>')
 

@@ -11,15 +11,21 @@ tbody[id^=threadbits_forum] * {
   padding: 0 !important; }
 tbody[id^=threadbits_forum] td .threadicon {
   display: none; }
+tbody[id^=threadbits_forum] tr.last_postit + tr {
+  height: 10px !important; }
+tbody[id^=threadbits_forum] tr.postit + tr.spacer td {
+  height: 5px !important; }
 tbody[id^=threadbits_forum] tr.spacer td {
   height: 10px;
   padding: 0 !important; }
 tbody[id^=threadbits_forum] tr:nth-child(odd) td {
+  position: relative;
   overflow: hidden; }
   tbody[id^=threadbits_forum] tr:nth-child(odd) td div {
-    position: relative;
+    position: absolute;
     top: -25px;
-    margin: 0 40px;
+    left: 5%;
+    right: 5%;
     height: 10px;
     z-index: -1;
     box-shadow: 0 0 20px 0 black;
@@ -51,7 +57,9 @@ tbody[id^=threadbits_forum] tr:nth-child(even) {
     -webkit-transform: scale(1.01);
     transform: scale(1.01); }
     tbody[id^=threadbits_forum] tr:nth-child(even):hover + tr td div {
-      top: -15px; }
+      top: -14px; }
+    tbody[id^=threadbits_forum] tr:nth-child(even):hover ~ tr * {
+      z-index: -1; }
     tbody[id^=threadbits_forum] tr:nth-child(even):hover td:nth-child(3) div:first-of-type span span.texttags a {
       visibility: visible;
       opacity: 1 !important; }
@@ -91,6 +99,18 @@ tbody[id^=threadbits_forum] tr:nth-child(even) {
         -webkit-transition: opacity 0.4s, visibility 0;
         -webkit-transition-delay: 0.05s, 0s;
         transition: opacity 0.4s 0.05s, visibility 0; }
+  tbody[id^=threadbits_forum] tr:nth-child(even).postit td {
+    padding: 10px 0 !important; }
+    tbody[id^=threadbits_forum] tr:nth-child(even).postit td:nth-child(3) {
+      font-size: 0.8rem !important; }
+      tbody[id^=threadbits_forum] tr:nth-child(even).postit td:nth-child(3) div:nth-of-type(2) {
+        display: none; }
+      tbody[id^=threadbits_forum] tr:nth-child(even).postit td:nth-child(3) div:nth-of-type(3) {
+        top: 14px !important; }
+    tbody[id^=threadbits_forum] tr:nth-child(even).postit td:first-child {
+      padding-left: 20px !important; }
+    tbody[id^=threadbits_forum] tr:nth-child(even).postit td:nth-child(3) div:first-of-type span span.texttags {
+      top: -10px; }
 tbody[id^=threadbits_forum] td:nth-child(3) {
   position: relative;
   font: 400 0.9rem Open Sans; }
@@ -165,21 +185,21 @@ tbody[id^=threadbits_forum] td:nth-child(3) {
     left: -38px !important; }
     tbody[id^=threadbits_forum] td:nth-child(3) div:nth-of-type(3) img {
       max-width: 25px; }
-tbody[id^=threadbits_forum] td.warm {
-  background: -moz-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important;
-  background: -webkit-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important;
-  background: linear-gradient(to right, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important; }
-  tbody[id^=threadbits_forum] td.warm ~ td {
-    background-color: rgba(240, 220, 40, 0.1) !important; }
-tbody[id^=threadbits_forum] td.hot {
-  background: -moz-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.4) 100%) !important;
-  background: -webkit-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.4) 100%) !important;
-  background: linear-gradient(to right, #ffffff 0%, rgba(240, 220, 40, 0.4) 100%) !important; }
-  tbody[id^=threadbits_forum] td.hot ~ td {
-    background-color: rgba(240, 220, 40, 0.4) !important; }
-tbody[id^=threadbits_forum] td.burn {
-  background: -moz-linear-gradient(left, #ffffff 0%, #f0dc28 100%) !important;
-  background: -webkit-linear-gradient(left, #ffffff 0%, #f0dc28 100%) !important;
-  background: linear-gradient(to right, #ffffff 0%, #f0dc28 100%) !important; }
-  tbody[id^=threadbits_forum] td.burn ~ td {
-    background-color: #f0dc28 !important; }
+  tbody[id^=threadbits_forum] td:nth-child(3):not(.postit) td.warm {
+    background: -moz-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important;
+    background: -webkit-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important; }
+    tbody[id^=threadbits_forum] td:nth-child(3):not(.postit) td.warm ~ td {
+      background-color: rgba(240, 220, 40, 0.1) !important; }
+  tbody[id^=threadbits_forum] td:nth-child(3):not(.postit) td.hot {
+    background: -moz-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.4) 100%) !important;
+    background: -webkit-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.4) 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, rgba(240, 220, 40, 0.4) 100%) !important; }
+    tbody[id^=threadbits_forum] td:nth-child(3):not(.postit) td.hot ~ td {
+      background-color: rgba(240, 220, 40, 0.4) !important; }
+  tbody[id^=threadbits_forum] td:nth-child(3):not(.postit) td.burn {
+    background: -moz-linear-gradient(left, #ffffff 0%, #f0dc28 100%) !important;
+    background: -webkit-linear-gradient(left, #ffffff 0%, #f0dc28 100%) !important;
+    background: linear-gradient(to right, #ffffff 0%, #f0dc28 100%) !important; }
+    tbody[id^=threadbits_forum] td:nth-child(3):not(.postit) td.burn ~ td {
+      background-color: #f0dc28 !important; }

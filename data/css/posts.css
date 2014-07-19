@@ -131,34 +131,32 @@ td[id^=td_post_] td, td[id^=td_post_] tr {
   padding: 20px 40px 60px; }
   .post_content > * {
     line-height: 20px; }
-  .post_content a:link, .post_content a:active {
+  .post_content > a:link, .post_content > a:active {
     display: inline-block !important;
     font-size: 0.8rem !important !important;
     font-weight: 400 !important;
-    background-color: #cccccc !important;
+    background: none !important;
     color: black !important;
-    border-radius: 4px !important;
     -moz-transition: background 0.4s;
     -o-transition: background 0.4s;
     -webkit-transition: background 0.4s;
     transition: background 0.4s;
-    padding: 3px 5px !important;
-    text-decoration: none !important; }
-  .post_content a:visited {
+    padding: 0 !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid #f0dc28; }
+  .post_content > a:visited {
     display: inline-block !important;
     font-size: 0.8rem !important !important;
     font-weight: 400 !important;
-    background-color: #cccccc !important;
+    background: none !important;
     color: black !important;
-    border-radius: 4px !important;
     -moz-transition: background 0.4s;
     -o-transition: background 0.4s;
     -webkit-transition: background 0.4s;
     transition: background 0.4s;
-    padding: 3px 5px !important;
     background-color: #eeeeee !important; }
-  .post_content a:hover {
-    background: #fae682 !important;
+  .post_content > a:hover {
+    background: none !important;
     color: black !important; }
 
 /* ###################################### */
