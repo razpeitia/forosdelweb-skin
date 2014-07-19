@@ -8,7 +8,7 @@
   "content_scripts": [{
     "matches": ["http://www.forosdelweb.com/*"],
     "css": ["data/css/global.css","data/css/posts.css","data/css/blackened.css"],
-    "js": ["data/js/jquery.min.js", "data/js/fdwskin.js"]
+    "js": ["data/js/jquery.min.js", "data/js/fdwskin.js", "data/js/cookies.js", "data/js/fdwusability.js"]
     }],
 
   "web_accessible_resources": [
