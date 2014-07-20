@@ -21,7 +21,10 @@ strong, b {
 
 body {
   position: relative;
-  background: #f0f0f0 !important; }
+  background-color: #f0f0f0 !important;
+  background-image: url(http://www.maestrosdelweb.com/images/2008/11/isotipofdw_hr.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
   body:before {
     position: absolute;
     z-index: 999999;
@@ -29,7 +32,10 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    content: "";
+    text-align: center;
+    padding: 40px;
+    content: "wait for it...";
+    font: 400 1rem open sans;
     background: #f0f0f0;
       background-image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif);
       background-repeat: no-repeat;
@@ -37,6 +43,7 @@ body {
   body.skinned:before {
     z-index: -1;
     background: transparent;
+    content: "";
     -moz-transition: background 0.4s ease-out, z-index 0 0.4s;
     -o-transition: background 0.4s ease-out, z-index 0 0.4s;
     -webkit-transition: background 0.4s ease-out, z-index 0;

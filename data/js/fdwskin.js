@@ -90,6 +90,7 @@ $(function() {
     $('#poststop ~ table.tborder').attr('id','thread_header_options');
     var unreaded_posts = $('table#thread_header_options tr td.tcat div.smallfont').html();
     $('table#thread_header_options tr td:first-child').remove()
+    $('#response_button_container').parent().parent().parent().attr('id','global_thread_header')
 
     // extract and create post header
     $('body > br + div[align=center]').attr('id','post_page_header')
@@ -100,6 +101,11 @@ $(function() {
     $('#post_page_header').children('div').children('div').children('.tborder').eq(0).empty()
     $('#posts').prepend('<div id="post_title">'+post_forum.replace(/»/,'') + post_title_link+'</div>');
     $('#navbits_finallink_ltr').prepend(post_title_text);
+
+
+    // copy thread tags somewhere in the header section
+    var thread_tags = $('#tag_list_cell').html()
+    $('#post_title').before('<div id="thread_tags">'+thread_tags+'</div>')
 
     // change 'iniciado por' for 'escribió'
     $('.quote_text_container > span').html(function(index,html){
@@ -151,9 +157,15 @@ $(function() {
     $('a[href^="http://www.forosdelweb.com/misc.php?do=whoposted&t="]').each(function() {
       var count = $(this).text()
       var parent = $(this).parent().prev()
-      if(count>49) parent.addClass('burn')
-      else if(count>25) parent.addClass('hot')
+      if(count>39) parent.addClass('burn')
+      else if(count>19) parent.addClass('hot')
       else if(count>9) parent.addClass('warm')
+    });
+
+    // views in friendly format
+    $('tbody[id^=threadbits_forum] tr td:last-child').each(function() {
+      var friendly_views = abbrNum($(this).text().replace('.',''),0)
+      $(this).empty().text(friendly_views)
     });
 
     // check if thread is a post-it
@@ -175,3 +187,21 @@ $(function() {
   $('body').addClass('skinned')
 
 });
+
+function abbrNum(number, decPlaces) {
+  decPlaces = Math.pow(10,decPlaces);
+  var abbrev = [ "k", "m", "b", "t" ];
+  for (var i=abbrev.length-1; i>=0; i--) {
+    var size = Math.pow(10,(i+1)*3);
+    if(size <= number) {
+      number = Math.round(number*decPlaces/size)/decPlaces;
+      if((number == 1000) && (i < abbrev.length - 1)) {
+        number = 1;
+        i++;
+      }
+      number += abbrev[i];
+      break;
+    }
+  }
+  return number;
+}

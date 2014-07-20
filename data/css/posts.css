@@ -5,6 +5,9 @@
 .cf:after {
   clear: both; }
 
+div[id^=edit] {
+  background: transparent !important; }
+
 #posts {
   padding-left: 0; }
 
@@ -12,9 +15,9 @@
 /* # Thread title # */
 /* ################ */
 table#thread_header_options {
-  position: absolute;
-  right: 20px;
-  top: 70px;
+  position: relative;
+  left: 0;
+  float: right;
   border: none !important;
   background: none !important; }
   table#thread_header_options * {
@@ -44,7 +47,7 @@ table#thread_header_options {
 #post_title {
   position: relative;
   margin: 20px 0;
-  padding: 0 20px 0 265px; }
+  padding: 0 20px 0 330px; }
   #post_title a {
     display: block !important;
     font: 600 2.2rem "open sans", serif !important;
@@ -52,13 +55,13 @@ table#thread_header_options {
     vertical-align: middle; }
     #post_title a:first-child {
       position: absolute;
-      top: 5px;
-      left: 230px;
+      top: 15px;
+      left: 300px;
       display: block !important;
-      padding: 10px;
-        padding-left: 15px;
+      padding: 20px;
+        padding-left: 25px;
       background: #555555;
-      font: 400 0.9rem "open sans" !important;
+      font: 400 1.1rem "open sans" !important;
       color: #eeeeee !important;
       text-transform: uppercase;
       -moz-transition: background 0.3s;
@@ -76,9 +79,9 @@ table#thread_header_options {
         content: "";
         width: 0;
         height: 0;
-        border-top: 19px solid transparent;
+        border-top: 31px solid transparent;
         border-left: 15px solid #555555;
-        border-bottom: 19px solid transparent;
+        border-bottom: 31px solid transparent;
         -moz-transition: border-left-color 0.3s;
         -o-transition: border-left-color 0.3s;
         -webkit-transition: border-left-color 0.3s;
@@ -89,9 +92,47 @@ table#thread_header_options {
         #post_title a:first-child:hover:after {
           border-left-color: #111111; }
 
+#thread_tags {
+  position: relative;
+  overflow: hidden; }
+  #thread_tags .texttags {
+    position: relative;
+    float: right; }
+    #thread_tags .texttags a {
+      position: relative;
+      display: inline-block;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      padding: 10px;
+        padding-right: 15px;
+      background: #f0dc28;
+      font-size: 0.9rem !important;
+      border-radius: 8px 0 0 8px;
+      color: #a6970c; }
+      #thread_tags .texttags a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        border-top: 21px solid transparent !important;
+        border-left: 21px solid #f0dc28 !important;
+        border-bottom: 21px solid transparent !important; }
+      #thread_tags .texttags a:after {
+        content: "";
+        position: absolute;
+        top: 16px;
+        right: -3px;
+        width: 10px;
+        height: 10px;
+        background: #f0f0f0;
+        border-radius: 50%; }
+
+#global_thread_header {
+  overflow: hidden; }
+
 #response_button_container {
   position: relative;
-  top: -31px; }
+  top: 0; }
 
 #navbits_finallink_ltr {
   margin: 20px 0 30px !important;
@@ -305,13 +346,14 @@ pre {
 /* ################# */
 tr.row_post_info td:first-child,
 td.user_profile {
-  width: 240px !important; }
+  width: 300px !important; }
 
 td.user_profile {
   text-align: right;
   position: relative;
   font-family: open sans;
   padding: 60px 20px 20px;
+  background: transparent !important;
   /* tags */ }
   td.user_profile.is_modcol {
     border-right: 4px solid black !important; }
