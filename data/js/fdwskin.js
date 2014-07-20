@@ -107,6 +107,9 @@ $(function() {
     var thread_tags = $('#tag_list_cell').html()
     $('#post_title').after('<div id="thread_tags">'+thread_tags+'</div>')
 
+    // move thread options into thread_tags
+    $('#thread_header_options').prependTo('#thread_tags')
+
     // change 'iniciado por' for 'escribió'
     $('.quote_text_container > span').html(function(index,html){
       return html.replace('Iniciado por','escribió:');
@@ -188,11 +191,8 @@ $(function() {
   // parallax
     $(window).scroll(function () {
       var s = $(window).scrollTop();
-      $("body").css("backgroundPosition","0 " +(s/4)+"px");
-      console.log(s)
+      $("body").css("backgroundPosition","-200px " +(s/4)+"px");
     })
-  console.log('hola')
-  
   
   // Mostrar body
   $('body').addClass('skinned')
