@@ -99,13 +99,13 @@ $(function() {
     post_forum = $('#navbits_finallink_ltr').parent().parent().prev().children().eq(2).children().last().html();
     $('#post_page_header').children('div').children('div').children('table').eq(0).empty()
     $('#post_page_header').children('div').children('div').children('.tborder').eq(0).empty()
-    $('#posts').prepend('<div id="post_title">'+post_forum.replace(/»/,'') + post_title_link+'</div>');
+    $('#posts').before('<div id="post_title">'+post_forum.replace(/»/,'') + post_title_link+'</div>');
     $('#navbits_finallink_ltr').prepend(post_title_text);
 
 
     // copy thread tags somewhere in the header section
     var thread_tags = $('#tag_list_cell').html()
-    $('#post_title').before('<div id="thread_tags">'+thread_tags+'</div>')
+    $('#post_title').after('<div id="thread_tags">'+thread_tags+'</div>')
 
     // change 'iniciado por' for 'escribió'
     $('.quote_text_container > span').html(function(index,html){
@@ -163,7 +163,7 @@ $(function() {
     });
 
     // views in friendly format
-    $('tbody[id^=threadbits_forum] tr td:last-child').each(function() {
+    $('tbody[id^=threadbits_forum] tr td:nth-child(6)').each(function() {
       var friendly_views = abbrNum($(this).text().replace('.',''),0)
       $(this).empty().text(friendly_views)
     });
@@ -183,6 +183,17 @@ $(function() {
 
   }
 
+  // ALL WEB JS:
+
+  // parallax
+    $(window).scroll(function () {
+      var s = $(window).scrollTop();
+      $("body").css("backgroundPosition","0 " +(s/4)+"px");
+      console.log(s)
+    })
+  console.log('hola')
+  
+  
   // Mostrar body
   $('body').addClass('skinned')
 

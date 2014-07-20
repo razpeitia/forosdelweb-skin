@@ -24,7 +24,7 @@ body {
   background-color: #f0f0f0 !important;
   background-image: url(http://www.maestrosdelweb.com/images/2008/11/isotipofdw_hr.png);
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-position: 0 0; }
   body:before {
     position: absolute;
     z-index: 999999;

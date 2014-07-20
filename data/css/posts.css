@@ -5,8 +5,8 @@
 .cf:after {
   clear: both; }
 
-div[id^=edit] {
-  background: transparent !important; }
+div[id^=edit], .row_post_options td {
+  background-color: transparent !important; }
 
 #posts {
   padding-left: 0; }
@@ -47,7 +47,7 @@ table#thread_header_options {
 #post_title {
   position: relative;
   margin: 20px 0;
-  padding: 0 20px 0 330px; }
+  padding: 0 20px 0 290px; }
   #post_title a {
     display: block !important;
     font: 600 2.2rem "open sans", serif !important;
@@ -56,7 +56,7 @@ table#thread_header_options {
     #post_title a:first-child {
       position: absolute;
       top: 15px;
-      left: 300px;
+      left: 260px;
       display: block !important;
       padding: 20px;
         padding-left: 25px;
@@ -346,7 +346,7 @@ pre {
 /* ################# */
 tr.row_post_info td:first-child,
 td.user_profile {
-  width: 300px !important; }
+  width: 260px !important; }
 
 td.user_profile {
   text-align: right;
@@ -356,7 +356,7 @@ td.user_profile {
   background: transparent !important;
   /* tags */ }
   td.user_profile.is_modcol {
-    border-right: 4px solid black !important; }
+    border-right: 4px solid #f0dc28 !important; }
     td.user_profile.is_modcol.is_col {
       border-right: 4px solid #cccccc !important; }
     td.user_profile.is_modcol.is_banned {
@@ -377,8 +377,8 @@ td.user_profile {
     display: inline-block;
     margin-top: 5px;
     border-radius: 5px 0 0 5px;
-    color: white;
-    background: black;
+    color: #333333;
+    background: #f0dc28;
     padding: 8px 20px 8px 10px; }
   td.user_profile.is_banned .cartelito_modcol {
     color: firebrick; }
@@ -416,8 +416,8 @@ td.user_profile {
       display: inline-block;
       padding: 3px;
         padding-left: 15px;
-      background: #f0dc28;
-      color: #a6970c !important;
+      background: #555555;
+      color: #eeeeee !important;
       text-transform: uppercase;
       font: 400 0.6rem Open Sans !important;
       border-radius: 5px;
@@ -451,32 +451,32 @@ td.user_profile {
             padding-right: 5px; }
         td.user_profile .user_info div.tag a span.count {
           padding: 3px;
-          color: #a6970c !important;
-          background: rgba(255, 255, 255, 0.5);
+          color: #eeeeee !important;
+          background: #888888;
           border-radius: 5px; }
     td.user_profile .user_info div.tag:hover a {
       z-index: 9999;
-      background: black;
-      -moz-animation: clipclap 0.6s;
-      -webkit-animation: clipclap 0.6s;
-      animation: clipclap 0.6s;
+      background: #f0dc28;
+      -moz-animation: rotagte 0.6s;
+      -webkit-animation: rotagte 0.6s;
+      animation: rotagte 0.6s;
       -moz-transition: background 90ms 540ms, color 1s ease-out 5s;
       -o-transition: background 90ms 540ms, color 1s ease-out 5s;
       -webkit-transition: background 90ms, color 1s ease-out;
       -webkit-transition-delay: 540ms, 5s;
       transition: background 90ms 540ms, color 1s ease-out 5s; }
       td.user_profile .user_info div.tag:hover a span {
-        color: #eeeeee !important;
-        border-color: black;
+        color: #a6970c;
         -moz-transition: all 90ms 540ms;
         -o-transition: all 90ms 540ms;
         -webkit-transition: all 90ms;
         -webkit-transition-delay: 540ms;
         transition: all 90ms 540ms; }
         td.user_profile .user_info div.tag:hover a span.count {
-          background: #555555; }
+          background: rgba(255, 255, 255, 0.5);
+          color: #a6970c !important; }
 
-@-moz-keyframes clipclap {
+@-moz-keyframes rotagte {
   from {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg); }
@@ -484,7 +484,7 @@ td.user_profile {
   to {
     -moz-transform: rotate(360deg);
     transform: rotate(360deg); } }
-@-webkit-keyframes clipclap {
+@-webkit-keyframes rotagte {
   from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
@@ -492,7 +492,7 @@ td.user_profile {
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-@keyframes clipclap {
+@keyframes rotagte {
   from {
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -794,15 +794,6 @@ table[id^=post] + .vbmenu_popup table tr:first-child {
   display: none; }
 .row_post_options .love > div:first-child span a img {
   display: none; }
-
-.row_post_info td:first-child, .row_post_info td:last-child {
-  background-color: none !important; }
-
-.row_post_content td:first-child {
-  background-color: none !important; }
-
-.row_post_options td:first-child, .row_post_options td:last-child {
-  background-color: none !important; }
 
 .row_post_content td[id^=td_post_], table[id^=post] + .vbmenu_popup table td {
   padding: 0; }
