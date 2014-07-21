@@ -114,10 +114,6 @@ $(function() {
     $('.quote_text_container > span').html(function(index,html){
       return html.replace('Iniciado por','escribió:');
     });
-
-    // fix scrolling to hash
-    var hash = window.location.hash
-    if(hash) $(window).scrollTop($(hash).offset().top-40)
     
     // #### COSITAS ######
     // mostrar/ocultar citas
@@ -153,12 +149,12 @@ $(function() {
     $('tbody[id^=threadbits_forum] tr td:nth-child(3)').removeAttr('title')
 
     // change triangle/heart
-    where_is_my_heart = /Firefox/i.test(navigator.userAgent) ? '../images/love.png' : 'chrome-extension://'+chrome.runtime.id+'/data/images/love.png'
+    where_is_my_heart = /Firefox/i.test(navigator.userAgent) ? '../images/multi.png' : 'chrome-extension://'+chrome.runtime.id+'/data/images/heart.gif'
     $('img[src="http://static.forosdelweb.com/fdwtheme/images/buttons/up.png"]').attr('src',where_is_my_heart)
 
     // activity indicator
     $('a[href^="http://www.forosdelweb.com/misc.php?do=whoposted&t="]').each(function() {
-      var count = $(this).text()
+      var count = $(this).text().replace('.','')
       var parent = $(this).parent().prev()
       if(count>39) parent.addClass('burn')
       else if(count>19) parent.addClass('hot')
@@ -193,6 +189,10 @@ $(function() {
       var s = $(window).scrollTop();
       $("body").css("backgroundPosition","-200px " +(s/4)+"px");
     })
+
+  // fix scrolling to hash
+    var hash = window.location.hash
+    if(hash) $(window).scrollTop($(hash).offset().top-40)
   
   // Mostrar body
   $('body').addClass('skinned')

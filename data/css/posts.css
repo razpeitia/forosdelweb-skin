@@ -446,10 +446,10 @@ td.user_profile {
       -webkit-transition: background 1s ease-out, color 1s ease-out;
       -webkit-transition-delay: 5s, 5s;
       transition: background 1s ease-out 5s, color 1s ease-out 5s;
-      -moz-transform-origin: 10px 12px 0 50%;
-      -ms-transform-origin: 10px 12px 0 50%;
-      -webkit-transform-origin: 10px 12px 0 50%;
-      transform-origin: 10px 12px 0 50%; }
+      -moz-transform-origin: 10px 12px;
+      -ms-transform-origin: 10px 12px;
+      -webkit-transform-origin: 10px 12px;
+      transform-origin: 10px 12px; }
       td.user_profile .user_info div.tag a:before {
         position: absolute;
         top: 9px;
@@ -627,6 +627,11 @@ table[id^=post] + .vbmenu_popup {
 /* ################ */
 /* # Post options # */
 /* ################ */
+.row_post_options td:nth-child(2) img[src="http://static.forosdelweb.com/fdwtheme/images/buttons/redcard.gif"],
+.row_post_options td:nth-child(2) img[src="http://static.forosdelweb.com/fdwtheme/images/buttons/yellowcard.gif"] {
+  position: absolute;
+  right: 40px;
+  margin-top: -40px; }
 .row_post_options td:nth-child(2) a.post_option_link {
   position: relative;
   top: -40px;

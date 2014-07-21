@@ -129,10 +129,10 @@ tbody[id^=threadbits_forum] td:nth-child(3) {
         top: 0;
         right: 0;
         text-align: right;
-        -moz-transform-origin: top right 0 50%;
-        -ms-transform-origin: top right 0 50%;
-        -webkit-transform-origin: top right 0 50%;
-        transform-origin: top right 0 50%;
+        -moz-transform-origin: top right;
+        -ms-transform-origin: top right;
+        -webkit-transform-origin: top right;
+        transform-origin: top right;
         -moz-transform: rotate(-90deg) translate(12px, -100%);
         -ms-transform: rotate(-90deg) translate(12px, -100%);
         -webkit-transform: rotate(-90deg) translate(12px, -100%);
@@ -159,10 +159,10 @@ tbody[id^=threadbits_forum] td:nth-child(3) {
           font-family: open sans;
           visibility: hidden;
           opacity: 0;
-          -moz-transform-origin: top right 0 50%;
-          -ms-transform-origin: top right 0 50%;
-          -webkit-transform-origin: top right 0 50%;
-          transform-origin: top right 0 50%;
+          -moz-transform-origin: top right;
+          -ms-transform-origin: top right;
+          -webkit-transform-origin: top right;
+          transform-origin: top right;
           -moz-transform: rotate(45deg) translateX(-10px);
           -ms-transform: rotate(45deg) translateX(-10px);
           -webkit-transform: rotate(45deg) translateX(-10px);
@@ -186,12 +186,9 @@ tbody[id^=threadbits_forum] td:nth-child(3) {
     font-style: italic; }
   tbody[id^=threadbits_forum] td:nth-child(3) div:nth-of-type(3) {
     top: 30px !important;
-    left: -38px !important;
-    -moz-animation: vive 2s linear infinite;
-    -webkit-animation: vive 2s linear infinite;
-    animation: vive 2s linear infinite; }
+    left: -38px !important; }
     tbody[id^=threadbits_forum] td:nth-child(3) div:nth-of-type(3) img {
-      max-width: 20px; }
+      max-width: 26px; }
 tbody[id^=threadbits_forum] tr:not(.postit) td.warm {
   background: -moz-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important;
   background: -webkit-linear-gradient(left, #ffffff 0%, rgba(240, 220, 40, 0.1) 100%) !important;
