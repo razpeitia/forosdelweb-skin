@@ -1,0 +1,102 @@
+@import _base
+
+/* ######### */
+/* # Fonts # */
+/* ######### */
+
+@import fonts
+
+strong, b
+  font-weight: 600
+
+body
+  position: relative
+  background:
+    color: #f0f0f0 !important
+    image: url(http://www.maestrosdelweb.com/images/2008/11/isotipofdw_hr.png)
+    repeat: no-repeat
+    //attachment: fixed
+    position: -200px 0
+
+  &:before
+    position: absolute
+    z-index: 999999
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    text-align: center
+    padding: 40px
+    content: 'wait for it...'
+    font: 400 1rem open sans
+    background: #f0f0f0
+      image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif)
+      repeat: no-repeat
+      position: center 200px
+  &.skinned:before
+    z-index: -1
+    background: rgba(0,0,0,0)
+    content: ''
+    +transition(background .4s ease-out, z-index 0 .4s)
+  
+
+#user_head > img
+  border-radius: 50%
+
+.threadsticon
+  position: relative
+  left: 5px
+  display: block
+  height: 13px !important
+  width: 13px !important
+  border-radius: 50%
+
+// participado en el tema - negro
+.tist_dot
+  background: #999 !important
+
+// cerrado - rojo
+.tist_lock
+  background: #DC143C !important
+
+// nada - gris
+.tist
+  background: #dcdcdc !important
+
+// movido - amarillo
+.tist_moved
+  background: #FFD700 !important
+
+// nuevos mensajes - verde
+.tist_new
+  background: #228B22 !important
+
+// movido con nuevos mensajes
+.tist_moved_new
+  background: #FFD700 !important
+  -webkit-animation: moved_new 1s infinite forwards
+
+// participado con nuevos mensajes
+.tist_dot_new
+  background: #999 !important
+  -webkit-animation: dot_new 1s infinite forwards
+
+@-webkit-keyframes moved_new
+  from, to
+    background: #FFD700
+  50%
+    background: #999
+
+@-webkit-keyframes dot_new
+  from, to
+    background: #228B22
+  50%
+    background: #999
+
+
+tbody[id^=threadbits_forum] tr td.alt2:nth-child(2)
+  position: relative
+  z-index: -1
+
+.thead, .tborder, .alt2.pbit
+  border: none!important

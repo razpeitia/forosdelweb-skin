@@ -1,0 +1,170 @@
+@import _base
+
+tr.row_post_info td:first-child,
+td.user_profile
+  width: $user_info_width !important
+
+td.user_profile
+  text-align: right
+  position: relative
+  font-family: open sans
+  padding: 60px 20px 20px
+  background: transparent !important
+
+  &.is_modcol
+    border-right: 4px solid $mod_post_color !important
+    &.is_col
+      border-right: 4px solid $col_post_color !important
+    &.is_banned
+      *
+        opacity: .6 !important
+      border-right: none !important
+
+  .bigusername
+    display: block
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+    font: 600 1.6rem Open Sans !important
+
+  .smallfont
+    font-family: open sans
+
+  &:not(.is_banned) .smallfont.cartelito_modcol
+    position: relative
+    left: 20px
+    display: inline-block
+    margin-top: 5px
+    border-radius: 5px 0 0 5px
+    color: #333
+    background: $mod_post_color
+    padding: 8px 20px 8px 10px
+
+  &.is_banned .cartelito_modcol
+    color: firebrick
+
+  &.is_modcol
+    &:not(.is_banned) .smallfont.user_avatar
+      right: -2px
+      /* half of border */
+    &.is_col .cartelito_modcol
+      text-transform: lowercase
+      background: $col_post_color
+      color: #000
+
+  .smallfont.user_avatar
+    position: absolute
+    top: 15px
+    right: 0
+    z-index: 1
+  .smallfont.user_avatar a
+    display: block
+    border-radius: 50%
+    overflow: hidden
+    -webkit-transform: translateX(50%)
+    -moz-transform: translateX(50%)
+    transform: translateX(50%)
+  
+  /* tags */
+  &:hover .user_info div.tag
+    opacity: 1
+
+  .user_info
+
+    div.tag
+      display: block
+      margin: 5px 0
+      opacity: .6
+      +transition(opacity .4s)
+
+      a
+        position: relative
+        display: inline-block
+        padding: 3px
+          left: 15px
+        background: #555
+        color: #eee !important
+        text-transform: uppercase
+        font: 400 .6rem Open Sans !important
+        border-radius: 5px
+        +transition(background 1s ease-out 5s, color 1s ease-out 5s)
+        +transform-origin(10px,12px)
+
+        &:before
+          position: absolute
+          top: 9px
+          left: 7px
+          width: 6px
+          height: 6px
+          background: #f0f0f0
+          border-radius: 50%
+          content: ''
+
+        span
+          display: inline-block
+          +transition(background 1s ease-out 5s, color 1s ease-out 5s)
+          &.name
+            padding: 3px
+              right: 5px
+          &.count
+            padding: 3px
+            color: #eee !important
+            background: #888
+            border-radius: 5px
+
+      &:hover
+        a
+          z-index: 9999
+          background: $hielo
+          +animation(rotagte .6s)
+          +transition(background 90ms 540ms, color 1s ease-out 5s)
+
+          span
+            color: darken($hielo,20)
+            //border-color: #000
+            +transition(all 90ms 540ms)
+            &.name
+            &.count
+              background: rgba(#fff,.5)
+              color: darken($hielo,20) !important
+
++keyframes(rotagte)
+  from
+    +transform(rotate(0deg))
+  to
+    +transform(rotate(360deg))
+/* popup */
+
+table[id^=post] + .vbmenu_popup
+  left: 270px!important
+  margin-top: -20px
+  border: none
+  background: #444
+  -webkit-transform: translate(-50%, -50%)
+  -moz-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  table
+    border-spacing: 0
+    border-collapse: collapse
+  .vbmenu_option a
+    &:link, &:visited, &:active
+      display: block!important
+      background: #333
+      color: #eee
+      font-size: 14px !important
+      -webkit-transition: background .3s
+      -moz-transition: background .3s
+      transition: background .3s
+      padding: 10px
+  .vbmenu_hilite a
+    &:link, &:visited, &:active
+      display: block!important
+      background: #333
+      color: #eee
+      font-size: 14px !important
+      -webkit-transition: background .3s
+      -moz-transition: background .3s
+      transition: background .3s
+      padding: 10px
+  .vbmenu_option a:hover, .vbmenu_hilite a:hover
+    background: #555

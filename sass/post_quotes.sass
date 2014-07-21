@@ -1,0 +1,56 @@
+.quote-container
+  width: auto !important
+  margin: 20px 0 !important
+
+.quote_text_container
+  position: relative
+  min-height: 50px
+  background: rgba(0, 0, 0, 0.1)
+  border: none !important
+  padding: 10px 40px
+  +transition(padding .4s)
+  span:first-child
+    display: block
+    margin-top: 15px
+    strong
+      float: left
+      margin: 0 5px
+    a
+      position: relative
+      top: -4px
+      left: 20px
+      float: right
+      background: none !important
+      z-index: 2
+      &:hover
+        text-decoration: underline !important
+      &:after
+        content: 'ver post'
+      img
+        display: none
+        
+  &:before,&:after
+    position: absolute
+    font-size: 7rem
+    font-family: monaco, 'andale mono', monospace 
+    color: #ccc
+    +transform(rotate(10deg))
+  &:before
+    top: 45px
+    left: -15px
+    content: '‘'
+  &:after
+    bottom: 70px
+    right: -15px
+    content: '‚'
+    opacity: 0
+    +transition(opacity .4s)
+  &.open
+    padding-bottom: 20px
+    &:after
+      opacity: 1
+
+  .quote-text
+    display: none
+    padding-bottom: 10px
+    line-height: 24px

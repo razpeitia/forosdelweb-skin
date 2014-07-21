@@ -1,0 +1,35 @@
+@import _base
+
+.post_content
+  position: relative
+  width: auto !important
+  font-family: Open Sans
+  font-size: 14px !important
+  line-height: 24px
+  color: #000
+  word-wrap: normal
+  padding: 20px 40px 60px
+  > *
+    line-height: 20px
+  > a
+    &:link, &:active
+      display: inline-block !important
+      font-size: .8rem !important !important
+      font-weight: 400 !important
+      background: none !important
+      color: #000 !important
+      +transition(background .4s)
+      padding: 0 !important
+      text-decoration: none !important
+      border-bottom: 2px solid $hielo
+    &:visited
+      display: inline-block !important
+      font-size: .8rem !important !important
+      font-weight: 400 !important
+      background: none !important
+      color: #000 !important
+      +transition(background .4s)
+      background-color: #eee !important
+    &:hover
+      background: none !important
+      color: #000 !important
