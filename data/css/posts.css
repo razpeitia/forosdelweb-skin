@@ -369,12 +369,11 @@ td.user_profile {
   width: 320px !important; }
 
 td.user_profile {
-  text-align: right;
   position: relative;
-  font-family: open sans;
+  text-align: right;
   padding: 60px 20px 20px;
-  background: transparent !important;
-  /* tags */ }
+  font-family: open sans;
+  background: transparent !important; }
   td.user_profile.is_modcol {
     border-right: 4px solid #f0dc28 !important; }
     td.user_profile.is_modcol.is_col {
@@ -403,8 +402,7 @@ td.user_profile {
   td.user_profile.is_banned .cartelito_modcol {
     color: firebrick; }
   td.user_profile.is_modcol:not(.is_banned) .smallfont.user_avatar {
-    right: -2px;
-    /* half of border */ }
+    right: -2px; }
   td.user_profile.is_modcol.is_col .cartelito_modcol {
     text-transform: lowercase;
     background: #cccccc;

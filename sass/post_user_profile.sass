@@ -1,25 +1,37 @@
 @import _base
 
+// primeras celdas de las primeras columnas
 tr.row_post_info td:first-child,
 td.user_profile
   width: $user_info_width !important
 
+// perfil de usuario
 td.user_profile
-  text-align: right
   position: relative
-  font-family: open sans
+  text-align: right
   padding: 60px 20px 20px
+  font-family: open sans
   background: transparent !important
 
+  // si es moderador
   &.is_modcol
     border-right: 4px solid $mod_post_color !important
+    
+    // si es colaborador
     &.is_col
       border-right: 4px solid $col_post_color !important
+
+    // si es un señor que se ha portado mal
     &.is_banned
+
+      // le damos opacidad
       *
         opacity: .6 !important
+
+      // le quitamos el borde de .is_modcold
       border-right: none !important
 
+  // el nombre de usuario
   .bigusername
     display: block
     text-overflow: ellipsis
@@ -27,9 +39,11 @@ td.user_profile
     white-space: nowrap
     font: 600 1.6rem Open Sans !important
 
+  // todos los elementos después del nombre de usuario
   .smallfont
     font-family: open sans
 
+  // el cartelito en si
   &:not(.is_banned) .smallfont.cartelito_modcol
     position: relative
     left: 20px
@@ -40,23 +54,31 @@ td.user_profile
     background: $mod_post_color
     padding: 8px 20px 8px 10px
 
+  // si es un usuario baneado
   &.is_banned .cartelito_modcol
     color: firebrick
 
+  // ajustamos el avatar
   &.is_modcol
+
+    // la mitad del borde de modcol
     &:not(.is_banned) .smallfont.user_avatar
       right: -2px
-      /* half of border */
+
+    // en caso de ser colaborador transformamos a minúsculas (estética)
     &.is_col .cartelito_modcol
       text-transform: lowercase
       background: $col_post_color
       color: #000
 
+  // contenedor del avatar
   .smallfont.user_avatar
     position: absolute
     top: 15px
     right: 0
     z-index: 1
+
+  // enlace del avatar
   .smallfont.user_avatar a
     display: block
     border-radius: 50%
@@ -65,7 +87,7 @@ td.user_profile
     -moz-transform: translateX(50%)
     transform: translateX(50%)
   
-  /* tags */
+  // etiquetas del usuario en el tema
   &:hover .user_info div.tag
     opacity: 1
 

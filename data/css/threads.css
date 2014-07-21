@@ -11,17 +11,16 @@ tbody[id^=threadbits_forum] * {
   padding: 0 !important; }
 tbody[id^=threadbits_forum] td .threadicon {
   display: none; }
-tbody[id^=threadbits_forum] tr.last_postit + tr {
+tbody[id^=threadbits_forum] tr.last_postit + tr.spacer {
   height: 10px !important; }
-tbody[id^=threadbits_forum] tr.postit + tr.spacer td {
-  height: 5px !important; }
+  tbody[id^=threadbits_forum] tr.last_postit + tr.spacer td {
+    height: 5px !important; }
 tbody[id^=threadbits_forum] tr.spacer td {
+  position: relative;
+  overflow: hidden;
   height: 10px;
   padding: 0 !important; }
-tbody[id^=threadbits_forum] tr:nth-child(odd) td {
-  position: relative;
-  overflow: hidden; }
-  tbody[id^=threadbits_forum] tr:nth-child(odd) td div {
+  tbody[id^=threadbits_forum] tr.spacer td div {
     position: absolute;
     top: -25px;
     left: 20px;
@@ -113,6 +112,8 @@ tbody[id^=threadbits_forum] tr:nth-child(even) {
         top: 14px !important; }
     tbody[id^=threadbits_forum] tr:nth-child(even).postit td:first-child {
       padding-left: 20px !important; }
+    tbody[id^=threadbits_forum] tr:nth-child(even).postit td:nth-child(6) {
+      padding-right: 20px !important; }
     tbody[id^=threadbits_forum] tr:nth-child(even).postit td:nth-child(3) div:first-of-type span span.texttags {
       top: -10px; }
 tbody[id^=threadbits_forum] td:nth-child(3) {

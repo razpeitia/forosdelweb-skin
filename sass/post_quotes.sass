@@ -1,7 +1,9 @@
+// contenedor original de citas
 .quote-container
   width: auto !important
   margin: 20px 0 !important
 
+// segundo contenedor de las citas
 .quote_text_container
   position: relative
   min-height: 50px
@@ -9,12 +11,18 @@
   border: none !important
   padding: 10px 40px
   +transition(padding .4s)
+
+  // título de la cita ("#{nick} escribió")
   span:first-child
     display: block
     margin-top: 15px
+
+    // #{nick}
     strong
       float: left
       margin: 0 5px
+
+    // enlace para ver post original
     a
       position: relative
       top: -4px
@@ -22,34 +30,49 @@
       float: right
       background: none !important
       z-index: 2
+
       &:hover
         text-decoration: underline !important
+      
+      // añadir texto al enlace
       &:after
         content: 'ver post'
+
+      // ocultar imagen original del enlace
       img
         display: none
-        
+  
+  // comillas de la caja de cita
   &:before,&:after
     position: absolute
     font-size: 7rem
     font-family: monaco, 'andale mono', monospace 
     color: #ccc
     +transform(rotate(10deg))
+
+  // comilla de apertura
   &:before
     top: 45px
     left: -15px
     content: '‘'
+
+  // comilla de cierre
   &:after
     bottom: 70px
     right: -15px
     content: '‚'
     opacity: 0
     +transition(opacity .4s)
+
+  // al abrir la cita...
   &.open
     padding-bottom: 20px
+
+    //... se muestra la comilla de cierre
     &:after
       opacity: 1
 
+  // ajustes en la caja de la cita
   .quote-text
     display: none
     padding-bottom: 10px

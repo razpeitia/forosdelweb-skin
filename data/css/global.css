@@ -78,19 +78,47 @@ body {
 
 .tist_moved_new {
   background: gold !important;
-  -webkit-animation: moved_new 1s infinite forwards; }
+  -moz-animation: moved_new 1s infinite forwards;
+  -webkit-animation: moved_new 1s infinite forwards;
+  animation: moved_new 1s infinite forwards; }
 
 .tist_dot_new {
   background: #999999 !important;
-  -webkit-animation: dot_new 1s infinite forwards; }
+  -moz-animation: dot_new 1s infinite forwards;
+  -webkit-animation: dot_new 1s infinite forwards;
+  animation: dot_new 1s infinite forwards; }
 
+@-moz-keyframes moved_new {
+  from, to {
+    background: gold; }
+
+  50% {
+    background: #999999; } }
 @-webkit-keyframes moved_new {
   from, to {
     background: gold; }
 
   50% {
     background: #999999; } }
+@keyframes moved_new {
+  from, to {
+    background: gold; }
+
+  50% {
+    background: #999999; } }
+@-moz-keyframes dot_new {
+  from, to {
+    background: forestgreen; }
+
+  50% {
+    background: #999999; } }
 @-webkit-keyframes dot_new {
+  from, to {
+    background: forestgreen; }
+
+  50% {
+    background: #999999; } }
+@keyframes dot_new {
   from, to {
     background: forestgreen; }
 

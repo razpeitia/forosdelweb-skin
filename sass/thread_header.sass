@@ -1,26 +1,26 @@
 @import _base
 
-// thread options container
+// contenedor de las opciones del tema
 table#thread_header_options
   float: right
   margin-right: 25px
   border: none !important
   background: none !important
   
-  // get rid of those ugly borders
+  // quitar los bordes feos de VB
   *
     border: none !important
 
-  // and reset the cells
+  // resetear las celdas
   td
     padding: 0 !important
     background: none !important
 
-    // to be over
+    // primera celda encima
     &:first-child
       z-index: 1
     
-    // anchors (options)
+    // enlaces de las opciones
     a
       display: block
       padding: 10px
@@ -33,24 +33,24 @@ table#thread_header_options
       &:hover
         background: #333
     
-    // hide VB images
+    // ocultar las imágenes de VB
     img
       display: none
 
-// wich is really thread title container
+// título del tema
 #post_title
   position: relative
   margin: 0 0
   padding: 0 20px 0 $user_info_width+30
 
-  // links
+  // enlaces
   a
     display: block !important
     font: 600 2.2rem 'open sans', serif !important
     color: #333 !important
     vertical-align: middle
 
-    // forum link
+    // enlace al foro al que pertenece el tema
     &:first-child
       position: absolute
       top: -5px
@@ -65,7 +65,7 @@ table#thread_header_options
       +transition(background .3s)
       +transform(translateX(-100%))
 
-      // triangle
+      // triángulo
       &:after
         position: absolute
         top: 0
@@ -78,24 +78,25 @@ table#thread_header_options
         border-bottom: 31px solid transparent
         +transition(border-left-color .3s)
 
-      // change background and hover
+      // cambiar fondo al :hover
       &:hover
         text-decoration: none
         background: #111
         &:after
           border-left-color: #111
 
-// tags container
+// contenedor de tags
 #thread_tags
   padding-left: $user_info_width+25
   margin-top: 30px
   overflow: hidden
 
+  // microcontenedor
   .texttags
     position: relative
     margin-right: 20px
 
-    // tag anchors
+    // enlaces de los tags
     a
       position: relative
       display: inline-block
@@ -111,7 +112,7 @@ table#thread_header_options
       text-decoration: none
       +transition(background .6s, color .6s)
 
-      // tag triangle
+      // triángulo del tag
       &:before
         content: ''
         position: absolute
@@ -122,7 +123,7 @@ table#thread_header_options
         border-bottom: 21px solid transparent !important
         +transition(border-left-color .6s)
       
-      // tag hole (circle)
+      // agujero del tag (círculo)
       &:after
         content: ''
         position: absolute
@@ -133,7 +134,7 @@ table#thread_header_options
         background: #f0f0f0
         border-radius: 50%
 
-      // change colors on hovering
+      // cambiar colores en el :hover
       &:hover
         background: #555
         color: #fff

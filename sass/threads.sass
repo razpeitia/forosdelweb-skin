@@ -4,38 +4,43 @@
 /* # Threads # */
 /* ########### */
 
+// listado de temas
 #threadslist
   background: none !important
   border-spacing: 0 !important
   border-collapse: collapse !important
 
+// contenedor de los TR de cada tema
 tbody[id^=threadbits_forum]
   
+  // resetear las castañas de VB
   *
     border: 0 !important
     padding: 0 !important
 
+  // ocultar el icono de VB
   td .threadicon
     display: none
 
-  tr.last_postit + tr
+  // altura de cada TR no-tema (insertado con JS) después de tema importante (postit)
+  tr.last_postit + tr.spacer
     height: 10px !important
 
-  tr.postit + tr.spacer td
-    height: 5px !important
+    // celda 
+    td
+      height: 5px !important
 
-  // spacing row
-  tr.spacer td
-    height: 10px
-    padding: 0 !important
+  // filas espaciadoras
+  tr.spacer
 
-  // spacers
-  tr:nth-child(odd)
-
+    // crear una sombra
     td
       position: relative
       overflow: hidden
-      // fake shadow
+      height: 10px
+      padding: 0 !important
+
+      // sombra
       div
         position: absolute
         top: -25px
@@ -46,45 +51,54 @@ tbody[id^=threadbits_forum]
         box-shadow: 0 0 20px 0 black
         +transition(top .2s)
 
-  // thread row
+  // fila del tema
   tr:nth-child(even)
     +transition(transform .2s)
 
-    // each cell
+    // cada celda
     td
       background: #fff
       padding: 20px 0 !important
       +transition(background-color .3s)
 
-      // start and end of row cells
+      // primera y...
       &:first-child
         padding: 20px !important
         border-radius: 10px 0 0 10px
+      
+      //...última celda
       &:last-child
         padding-right: 20px !important
         border-radius: 0 10px 10px 0
 
-      // monospaced font for thread stats (last two cells)
+      // fuente monoespaciado para estadísticas
       &:nth-child(6), &:last-child
         font-family: monaco, andale mono, monospace
     
-    // on hovering row
+    // al pasar encima (:hover) de la fila del tema
     &:hover
       +transform(scale(1.01))
+
+      // bajar la sombra
       + tr td div
         top: -14px
       
-      // needed that tags show over everything else after it own row
+      // cambiar al elemento que le sigue su z-index (para que las tags aparezcan por encima)
       + tr
+        
+        // la fila de la sombra
         *
           z-index: -1
+
+        // la fila del siguente tema
         + tr *:not(.threadsticon)
           z-index: -1
 
-      // show tags
+      // mostrar etiquetas
       td:nth-child(3) div:first-of-type span span.texttags a
         visibility: visible
         opacity: 1 !important
+
         //+transition(opacity .3s, visibility 0)
         //@for $i from 10 through 1
         //  &:nth-child(#{$i})
@@ -102,67 +116,69 @@ tbody[id^=threadbits_forum]
         &:nth-child(6)
           +transition(opacity .4s .05s, visibility 0)
 
-    // post-it
+    // temas importantes
     &.postit
 
-      // cells
+      // celdas
       td
         padding: 10px 0 !important
 
-        // title cell
+        // celda del título
         &:nth-child(3)
           font-size: .8rem !important
 
-          // author
+          // eliminar la información de autor
           div:nth-of-type(2)
             display: none
 
-          // updvote
+          // ajustar la posición del +1/+<3
           div:nth-of-type(3)
             top: 14px !important
 
+        // ajustar padding a primera y última fila
         &:first-child
           padding-left: 20px !important
+        &:nth-child(6)
+          padding-right: 20px !important
 
-        // move tags a bit up (there's less space!)
-        // title cell
+        // mover las etiquetas hacia arriba (hay menos sitio)
         &:nth-child(3) div:first-of-type span span.texttags
           top: -10px
 
-  // title cell
+  // celda del título
   td:nth-child(3)
     position: relative
     font: 400 .9rem Open Sans
     
-    // title
+    // tñitulo
     div:first-of-type
       position: relative
       
-      // tags
+      // etiquetas
       span
         margin-left: 20px
 
-        // TODO: do something (trashcan indicator "thread content some removed post")
+        // TODO: hacer algo con trashcan (indicador de que se han borrado mensajes del tema)
         .trashcan
           display: none !important
         
+        // subcontenedor de etiquetas
         span.texttags
           position: absolute
           top: 0
           right: 0
-          
           text-align: right
           +transform-origin(top, right)
           +transform(rotate(-90deg) translate(12px,-100%))
           +transition(opacity .3s, visibility 0 .3s)
           
-          // coma between tags
+          // comas entre etiquetas (gracias VB)
           span
             display: block
             opacity: 0
             font-size: 0
           
-          // tag link
+          // enlace de etiqueta
           a
             position: relative
             display: inline-block
@@ -171,7 +187,6 @@ tbody[id^=threadbits_forum]
               right: 16px !important
               left: 7px !important
             border-radius: 5px
-            //background: #6FA831
             background: $hielo
             color: darken($hielo,20) !important
             font-family: open sans
@@ -180,6 +195,7 @@ tbody[id^=threadbits_forum]
             +transform-origin(top, right)
             +transform(rotate(45deg) translateX(-10px))
 
+            // agujero de la etiqueta (círculo)
             &:before
               position: absolute
               top: 8px
@@ -190,37 +206,45 @@ tbody[id^=threadbits_forum]
               background: #fff
               border-radius: 50%
               content: ''
-
+            
+            // :hover del enlace
             &:hover
               text-decoration: none
               background: #333
               color: #fff !important
 
-    // author
+    // autor del tema
     div:nth-of-type(2)
       margin-top: 10px
+      font-style: italic
 
-      font:
-        style: italic
-
-    // updvote
+    // +1/+<3
     div:nth-of-type(3)
       top: 30px !important
       left: -38px !important
-
+      
+      // necesario para firefox (qué odioso es)
       img
         max-width: 26px
   
-  // posts with lots of activity
+  // temas con muchos mensajes
+  // se añade una clase mediante JS, se pone un degradado y el color del final
+  // del degradado se aplica como color sólido a las siguiente celdas
   tr:not(.postit) td
+
+    // si tiene más de 9 mensajes
     &.warm
       +background(linear-gradient(to right, rgba(white,1) 0%, rgba($hielo,.1) 100%) !important)
       ~ td
         background-color: rgba($hielo,.1) !important
+
+    // si tiene más de 19 mensajes
     &.hot
       +background(linear-gradient(to right, rgba(white,1) 0%, rgba($hielo,.4) 100%) !important)
       ~ td
         background-color: rgba($hielo,.4) !important
+
+    // si tiene más de 39 mensajes
     &.burn
       +background(linear-gradient(to right, rgba(white,1) 0%, rgba($hielo,1) 100%) !important)
       ~ td

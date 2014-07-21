@@ -13,11 +13,13 @@ body
   position: relative
   background:
     color: #f0f0f0 !important
+    // Algún día habrá que moverlo a /data/images
     image: url(http://www.maestrosdelweb.com/images/2008/11/isotipofdw_hr.png)
     repeat: no-repeat
     //attachment: fixed
     position: -200px 0
-
+  
+  // Secuencia de carga (evita que se vea el resampleado del sitio)
   &:before
     position: absolute
     z-index: 999999
@@ -33,16 +35,19 @@ body
       image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif)
       repeat: no-repeat
       position: center 200px
+
+  // esconde una vez cargada la página (controlado por javascript)
   &.skinned:before
     z-index: -1
     background: rgba(0,0,0,0)
     content: ''
     +transition(background .4s ease-out, z-index 0 .4s)
   
-
+// avatar de usuario logeado
 #user_head > img
   border-radius: 50%
 
+// círculo indicador de los temas
 .threadsticon
   position: relative
   left: 5px
@@ -74,20 +79,20 @@ body
 // movido con nuevos mensajes
 .tist_moved_new
   background: #FFD700 !important
-  -webkit-animation: moved_new 1s infinite forwards
+  +animation(moved_new 1s infinite forwards)
 
 // participado con nuevos mensajes
 .tist_dot_new
   background: #999 !important
-  -webkit-animation: dot_new 1s infinite forwards
+  +animation(dot_new 1s infinite forwards)
 
-@-webkit-keyframes moved_new
++keyframes(moved_new)
   from, to
     background: #FFD700
   50%
     background: #999
 
-@-webkit-keyframes dot_new
++keyframes(dot_new)
   from, to
     background: #228B22
   50%

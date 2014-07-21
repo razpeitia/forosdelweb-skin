@@ -1,5 +1,6 @@
 @import _base
 
+// contenedor del post (EL POST)
 .post_content
   position: relative
   width: auto !important
@@ -9,8 +10,13 @@
   color: #000
   word-wrap: normal
   padding: 20px 40px 60px
+
+  // todo elemento descendiente
   > *
     line-height: 20px
+
+  // cualquier enlace directo (evitar estilizar otros)
+  // está muy feo, no recuerdo porqué
   > a
     &:link, &:active
       display: inline-block !important
@@ -22,6 +28,7 @@
       padding: 0 !important
       text-decoration: none !important
       border-bottom: 2px solid $hielo
+
     &:visited
       display: inline-block !important
       font-size: .8rem !important !important
@@ -30,6 +37,7 @@
       color: #000 !important
       +transition(background .4s)
       background-color: #eee !important
+
     &:hover
       background: none !important
       color: #000 !important
