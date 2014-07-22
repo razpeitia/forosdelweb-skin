@@ -46,15 +46,15 @@ table#thread_header_options {
       left: 320px;
       display: block !important;
       padding: 20px;
-        padding-left: 25px;
+        padding-right: 15px;
       background: #555555;
-      font: 400 1.1rem "open sans" !important;
+      font: 400 16px "open sans" !important;
       color: #eeeeee !important;
       text-transform: uppercase;
-      -moz-transition: background 0.3s;
-      -o-transition: background 0.3s;
-      -webkit-transition: background 0.3s;
-      transition: background 0.3s;
+      -moz-transition: background 0.3s, padding 0.3s;
+      -o-transition: background 0.3s, padding 0.3s;
+      -webkit-transition: background 0.3s, padding 0.3s;
+      transition: background 0.3s, padding 0.3s;
       -moz-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
       -webkit-transform: translateX(-100%);
@@ -69,22 +69,23 @@ table#thread_header_options {
         border-top: 31px solid transparent;
         border-left: 15px solid #555555;
         border-right: 0;
-        border-bottom: 31px solid transparent;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s; }
+        border-bottom: 30px solid transparent;
+        -moz-transition: border 0.3s;
+        -o-transition: border 0.3s;
+        -webkit-transition: border 0.3s;
+        transition: border 0.3s; }
       #post_title a:first-child:before {
         left: auto;
         right: 100%;
         border-right: 0 solid #555555;
         border-left: 0; }
       #post_title a:first-child:hover {
+        padding-left: 15px;
+        padding-right: 20px;
         text-decoration: none;
         background: #111111; }
         #post_title a:first-child:hover:after {
-          border-left-color: #111111;
-          border-left: 0;
+          border-left: 0 solid #111111;
           -moz-transition: border-left 0.3s;
           -o-transition: border-left 0.3s;
           -webkit-transition: border-left 0.3s;
@@ -111,7 +112,7 @@ table#thread_header_options {
       padding: 10px;
         padding-right: 20px;
       background: #f0dc28;
-      font-size: 0.9rem !important;
+      font-size: 14px !important;
       border-radius: 8px 0 0 8px;
       color: #a6970c;
       text-decoration: none;
@@ -123,9 +124,9 @@ table#thread_header_options {
         content: "";
         position: absolute;
         top: 0;
-        right: -14px;
+        right: -10px;
         border-top: 21px solid transparent !important;
-        border-left: 15px solid #f0dc28 !important;
+        border-left: 10px solid #f0dc28 !important;
         border-bottom: 21px solid transparent !important;
         -moz-transition: border-left-color 0.6s;
         -o-transition: border-left-color 0.6s;

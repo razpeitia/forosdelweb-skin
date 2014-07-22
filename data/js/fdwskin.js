@@ -149,7 +149,7 @@ $(function() {
     $('tbody[id^=threadbits_forum] tr td:nth-child(3)').removeAttr('title')
 
     // change triangle/heart
-    where_is_my_heart = /Firefox/i.test(navigator.userAgent) ? '../images/multi.png' : 'chrome-extension://'+chrome.runtime.id+'/data/images/heart.gif'
+    where_is_my_heart = /Firefox/i.test(navigator.userAgent) ? 'http://i.imgur.com/EFKwJ4F.gif' : 'chrome-extension://'+chrome.runtime.id+'/data/images/heart.gif'
     $('img[src="http://static.forosdelweb.com/fdwtheme/images/buttons/up.png"]').attr('src',where_is_my_heart)
 
     // activity indicator
