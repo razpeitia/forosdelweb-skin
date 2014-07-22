@@ -23,12 +23,13 @@ td[id^=td_post]
 .post_content
   position: relative
   width: auto !important
+  padding: 20px 40px 60px
   font-family: Open Sans
   font-size: 14px !important
   line-height: 24px
-  color: #000
+  color: #222
   word-wrap: normal
-  padding: 20px 40px 60px
+  overflow: visible !important
 
   // todo elemento descendiente
   > *
@@ -49,12 +50,15 @@ td[id^=td_post]
       // chivato URL
       &:after
         top: -50px
+        max-width: 200px
         padding: 5px
         font-size: .6rem
         border-radius: 3px
         background: rgba(black,.7)
         color: #fff !important
         white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
         content: attr(href)
       
       // triángulo chivato

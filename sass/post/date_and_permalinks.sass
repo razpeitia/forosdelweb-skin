@@ -21,7 +21,6 @@ table[id^=post]
 
     // fecha
     .date_info
-      float: left
       font-size: 12px
       margin-bottom: 20px
       
@@ -46,10 +45,9 @@ table[id^=post]
 
     // contenedor de enlaces permalinks
     .post_links
-      position: relative
-      top: -10px
-      left: 30px
-      float: right
+      position: absolute
+      top: 0
+      right: -80px
       
       // enlaces
       a
@@ -59,42 +57,41 @@ table[id^=post]
         // enlace hacia permalink (#)
         &:last-of-type
           position: relative
-          top: 20px
-          left: -10px
-          padding: 5px !important
+          top: -30px
+          left: -15px
+          width: 30px
+          height: 30px
+          line-height: 30px
+          text-align: center
           color: #555
-          border-radius: 5px
-          opacity: 0
-          +transition(transform .4s ease-out 2s, background .4s, opacity .2s 2.2s) 
+          border-radius: 50%
+          +transition(background .4s)
           &:hover
-            opacity: 1
-            +transition(transform .4s ease-out, background .4s, opacity .2s) 
+            background: $hielo
+            +transition(background .4s)
 
         // enlace hacia post individual
         &:first-of-type
-          float: right
-          width: 50px
-          height: 50px
-          padding: 10px !important
-          line-height: 50px
-          text-align: center
+          position: relative
+          top: 30px
+          display: block
+          width: 80px
+          text-align: left
           font-size: 1.2rem
           color: #555
           background: none !important
-          border-radius: 50% !important
           opacity: .5
           +transition(background .4s !important)
 
+          strong
+            padding-left: 10px !important
+
           &:hover,&:visited
             opacity: 1
-            background: #eee !important
 
             // afectar a permalink cuando :hover
             + a
-              opacity: 1
               +animation(blink 1s infinite)
-              +transform(rotate(-180deg) scale(1.5))
-              +transition(transform .4s ease-out, background .3s, opacity .2s) 
 
       // mod input
       // TODO: moverlo más hacia arriba e integrar
@@ -107,4 +104,4 @@ table[id^=post]
   from,to
     background: #eee
   50%
-    background: gold
+    background: $hielo
