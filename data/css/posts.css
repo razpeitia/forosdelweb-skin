@@ -276,8 +276,8 @@ table[id^=post] {
       right: 0;
       width: 0;
       height: 0;
-      border-top: 30px solid yellowgreen;
-      border-left: 30px solid transparent;
+      border-top: 60px solid yellowgreen;
+      border-left: 60px solid transparent;
       background: none; }
     table[id^=post] .post_header .date_info a:link {
       background: none !important; }
