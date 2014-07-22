@@ -52,6 +52,7 @@ $(function() {
       if(link.length>0) post_link = link[0].outerHTML
       var input = $(this).children('td:last-child').children('input')
       if(input.length>0) post_input = input[0].outerHTML
+      console.log(link)
       var post_permalink = $(this).children('td:last-child').children('b').html().replace("permalink","#")
       var post_links = '<div class=post_links>' + post_input + post_link  + post_permalink + '</div>';
       var post_date = '<div class=date_info>' + $(this).children('td:first-child').html() + '</div>';
@@ -117,17 +118,11 @@ $(function() {
     
     // #### COSITAS ######
     // mostrar/ocultar citas
-    $('.quote_text_container').click(function(e){
-      $(this).children('.quote-text').slideToggle();
-      $(this).toggleClass('open');
-      e.stopPropagation()
-    })
-
-    // reescribir post para enlazar @menciones (experimental, falta aprobación de FB(aka0))
-    $('.post_content').each(function(){
-    var post = $(this).html().replace(/@([a-z\d_]+)/ig, '<a class="mention" href="http://forosdelweb.com/miembros/$1">@$1</a>')
-    $(this).empty().html(post)
-    })
+    //$('.quote_text_container').click(function(e){
+    //  $(this).children('.quote-text').slideToggle();
+    //  $(this).toggleClass('open');
+    //  e.stopPropagation();
+    //})
 
     // mark multiquote on click
     $('.row_post_options a.quote_post.multi').click(function(){

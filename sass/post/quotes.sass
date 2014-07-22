@@ -42,7 +42,7 @@
   min-height: 50px
   background: rgba(0, 0, 0, 0.1)
   border: none !important
-  padding: 10px 40px
+  padding: 10px 40px 20px
   +transition(padding .4s)
 
   // título de la cita ("#{nick} escribió")
@@ -94,19 +94,19 @@
     bottom: 70px
     right: -15px
     content: '‚'
-    opacity: 0
+    opacity: 1
     +transition(opacity .4s)
 
   // al abrir la cita...
-  &.open
-    padding-bottom: 20px
-
-    //... se muestra la comilla de cierre
-    &:after
-      opacity: 1
+  //&.open
+  //  padding-bottom: 20px
+  //
+  //  //... se muestra la comilla de cierre
+  //  &:after
+  //    opacity: 1
 
   // ajustes en la caja de la cita
   .quote-text
-    display: none
+    //display: none
     padding-bottom: 10px
     line-height: 24px
