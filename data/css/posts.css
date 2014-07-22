@@ -200,7 +200,7 @@ td[id^=td_post] {
     -webkit-transition: background 0.4s;
     transition: background 0.4s; }
     .post_content > a:link:after, .post_content > a:active:after {
-      top: -60px;
+      top: -50px;
       padding: 5px;
       font-size: 0.6rem;
       border-radius: 3px;
@@ -209,7 +209,7 @@ td[id^=td_post] {
       white-space: nowrap;
       content: attr(href); }
     .post_content > a:link:before, .post_content > a:active:before {
-      top: -30px;
+      top: -20px;
       content: "";
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
@@ -610,7 +610,7 @@ table[id^=post] + .vbmenu_popup {
   margin-bottom: 20px;
   font-size: 12px;
   border-top: 1px solid #cccccc;
-  opacity: 0.2;
+  opacity: 0.4;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
