@@ -68,24 +68,41 @@ table#thread_header_options
       +transform(translateX(-100%))
 
       // triángulo
-      &:after
+      &:after, &:before
         position: absolute
         top: 0
-        right: -15px
+        left: 100%
         content: ''
         width: 0
         height: 0
         border-top: 31px solid transparent
         border-left: 15px solid #555
+        border-right: 0
         border-bottom: 31px solid transparent
-        +transition(border-left-color .3s)
+        +transition(all .3s)
 
-      // cambiar fondo al :hover
+      // izquierda
+      &:before
+        left: auto
+        right: 100%
+        border-right: 0 solid #555
+        border-left: 0
+
+      // cambiar fondo al :hover y hacer la transición
       &:hover
         text-decoration: none
         background: #111
+
+        // destriangulizar flecha derecha
         &:after
           border-left-color: #111
+          border-left: 0
+          +transition(border-left .3s)
+
+        // triangulizar flecha izquierda
+        &:before
+          border-right: 15px solid #111
+          +transition(border-right .3s)
 
 // contenedor de tags
 #thread_tags
@@ -106,7 +123,7 @@ table#thread_header_options
         right: 30px
         bottom: 20px
       padding: 10px
-        right: 15px
+        right: 20px
       background: $hielo
       font-size: .9rem !important
       border-radius: 8px 0 0 8px
@@ -119,9 +136,9 @@ table#thread_header_options
         content: ''
         position: absolute
         top: 0
-        right: -20px
+        right: -14px
         border-top: 21px solid transparent !important
-        border-left: 21px solid $hielo !important
+        border-left: 15px solid $hielo !important
         border-bottom: 21px solid transparent !important
         +transition(border-left-color .6s)
       
@@ -130,7 +147,7 @@ table#thread_header_options
         content: ''
         position: absolute
         top: 16px
-        right: -3px
+        right: 3px
         width: 10px
         height: 10px
         background: #f0f0f0

@@ -38,19 +38,21 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #f0f0f0;
-      background-image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif);
-      background-repeat: no-repeat;
-      background-position: center 200px; }
+    background: #f0f0f0 url(http://www.maestrosdelweb.com/images/2008/11/isotipofdw_hr.png) no-repeat center 80px;
+    content: "Pintando la mona...";
+    text-align: center;
+    font: 400 1rem open sans;
+    padding-top: 40px; }
   body.skinned:before {
+    content: "";
     z-index: -1;
     background: transparent;
-    content: "";
-    -moz-transition: background 0.4s ease-out, z-index 0 0.4s;
-    -o-transition: background 0.4s ease-out, z-index 0 0.4s;
-    -webkit-transition: background 0.4s ease-out, z-index 0;
-    -webkit-transition-delay: 0s, 0.4s;
-    transition: background 0.4s ease-out, z-index 0 0.4s; }
+    opacity: 0;
+    -moz-transition: opacity 0.4s ease-out, background 0 0.4s, z-index 0 0.4s, content 0 0.4s;
+    -o-transition: opacity 0.4s ease-out, background 0 0.4s, z-index 0 0.4s, content 0 0.4s;
+    -webkit-transition: opacity 0.4s ease-out, background 0, z-index 0, content 0;
+    -webkit-transition-delay: 0s, 0.4s, 0.4s, 0.4s;
+    transition: opacity 0.4s ease-out, background 0 0.4s, z-index 0 0.4s, content 0 0.4s; }
 
 #user_head > img {
   border-radius: 50%; }

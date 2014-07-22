@@ -34,17 +34,19 @@ body
     right: 0
     bottom: 0
     left: 0
-    background: #f0f0f0
-      image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif)
-      repeat: no-repeat
-      position: center 200px
+    background: #f0f0f0 url(http://www.maestrosdelweb.com/images/2008/11/isotipofdw_hr.png) no-repeat center 80px
+    content: 'Pintando la mona...'
+    text-align: center
+    font: 400 1rem open sans
+    padding-top: 40px
 
   // esconde una vez cargada la página (controlado por javascript)
   &.skinned:before
+    content: ''
     z-index: -1
     background: rgba(0,0,0,0)
-    content: ''
-    +transition(background .4s ease-out, z-index 0 .4s)
+    opacity: 0
+    +transition(opacity .4s ease-out, background 0 .4s, z-index 0 .4s, content 0 .4s)
   
 // avatar de usuario logeado
 #user_head > img
