@@ -123,6 +123,12 @@ $(function() {
       e.stopPropagation()
     })
 
+    // reescribir post para enlazar @menciones (experimental, falta aprobación de FB(aka0))
+    $('.post_content').each(function(){
+    var post = $(this).html().replace(/@([a-z\d_]+)/ig, '<a class="mention" href="http://forosdelweb.com/miembros/$1">@$1</a>')
+    $(this).empty().html(post)
+    })
+
     // mark multiquote on click
     $('.row_post_options a.quote_post.multi').click(function(){
       $(this).toggleClass('selected');
@@ -173,7 +179,6 @@ $(function() {
         $(this).addClass('postit');
       }
     })
-
     $('tr.postit:last').addClass('last_postit')
 
 

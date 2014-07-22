@@ -36,27 +36,69 @@ td[id^=td_post]
 
   // cualquier enlace directo (evitar estilizar otros)
   // está muy feo, no recuerdo porqué
-  > a
+  > a:not(.mention)
     &:link, &:active
+      position: relative
       display: inline-block !important
-      font-size: .8rem !important !important
-      font-weight: 400 !important
       background: none !important
       color: #000 !important
-      +transition(background .4s)
-      padding: 0 !important
-      text-decoration: none !important
       border-bottom: 2px solid $hielo
+      text-decoration: none !important
+      +transition(background .4s)
+
+      // chivato URL
+      &:after
+        top: -60px
+        padding: 5px
+        font-size: .6rem
+        border-radius: 3px
+        background: rgba(black,.7)
+        color: #fff !important
+        white-space: nowrap
+        content: attr(href)
+      
+      // triángulo chivato
+      &:before
+        top: -30px
+        content: ''
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid rgba(black,.7)
+
+      // chivato y triángulo
+      &:after, &:before
+        position: absolute
+        left: 50%
+        opacity: 0
+        visibility: hidden
+        +transform(translateX(-50%))
+        +transition(opacity .3s, top .3s, visibility 0 .3s)
 
     &:visited
-      display: inline-block !important
-      font-size: .8rem !important !important
-      font-weight: 400 !important
-      background: none !important
+      border-color: #000
       color: #000 !important
-      +transition(background .4s)
-      background-color: #eee !important
 
+      &:after
+        color: #fff !important
+    
+    // mostrar chivato
     &:hover
-      background: none !important
-      color: #000 !important
+      
+      &:after, &:before
+        opacity: 1
+        visibility: visible
+        +transition(opacity .3s, top .3s, visibility 0)
+
+      &:after
+        top: -40px
+      &:before
+        top: -10px
+
+  > a.mention
+    display: inline-block
+    padding: 3px 5px
+    border-radius: 5px
+    color: #333 !important
+    background: $hielo !important
+    font-weight: 600
+    text-decoration: none !important

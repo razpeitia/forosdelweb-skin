@@ -188,33 +188,70 @@ td[id^=td_post] {
   padding: 20px 40px 60px; }
   .post_content > * {
     line-height: 20px; }
-  .post_content > a:link, .post_content > a:active {
+  .post_content > a:not(.mention):link, .post_content > a:not(.mention):active {
+    position: relative;
     display: inline-block !important;
-    font-size: 0.8rem !important !important;
-    font-weight: 400 !important;
     background: none !important;
     color: black !important;
-    -moz-transition: background 0.4s;
-    -o-transition: background 0.4s;
-    -webkit-transition: background 0.4s;
-    transition: background 0.4s;
-    padding: 0 !important;
+    border-bottom: 2px solid #f0dc28;
     text-decoration: none !important;
-    border-bottom: 2px solid #f0dc28; }
-  .post_content > a:visited {
-    display: inline-block !important;
-    font-size: 0.8rem !important !important;
-    font-weight: 400 !important;
-    background: none !important;
-    color: black !important;
     -moz-transition: background 0.4s;
     -o-transition: background 0.4s;
     -webkit-transition: background 0.4s;
-    transition: background 0.4s;
-    background-color: #eeeeee !important; }
-  .post_content > a:hover {
-    background: none !important;
+    transition: background 0.4s; }
+    .post_content > a:not(.mention):link:after, .post_content > a:not(.mention):active:after {
+      top: -60px;
+      padding: 5px;
+      font-size: 0.6rem;
+      border-radius: 3px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white !important;
+      white-space: nowrap;
+      content: attr(href); }
+    .post_content > a:not(.mention):link:before, .post_content > a:not(.mention):active:before {
+      top: -30px;
+      content: "";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid rgba(0, 0, 0, 0.7); }
+    .post_content > a:not(.mention):link:after, .post_content > a:not(.mention):link:before, .post_content > a:not(.mention):active:after, .post_content > a:not(.mention):active:before {
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+      visibility: hidden;
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -moz-transition: opacity 0.3s, top 0.3s, visibility 0 0.3s;
+      -o-transition: opacity 0.3s, top 0.3s, visibility 0 0.3s;
+      -webkit-transition: opacity 0.3s, top 0.3s, visibility 0;
+      -webkit-transition-delay: 0s, 0s, 0.3s;
+      transition: opacity 0.3s, top 0.3s, visibility 0 0.3s; }
+  .post_content > a:not(.mention):visited {
+    border-color: black;
     color: black !important; }
+    .post_content > a:not(.mention):visited:after {
+      color: white !important; }
+  .post_content > a:not(.mention):hover:after, .post_content > a:not(.mention):hover:before {
+    opacity: 1;
+    visibility: visible;
+    -moz-transition: opacity 0.3s, top 0.3s, visibility 0;
+    -o-transition: opacity 0.3s, top 0.3s, visibility 0;
+    -webkit-transition: opacity 0.3s, top 0.3s, visibility 0;
+    transition: opacity 0.3s, top 0.3s, visibility 0; }
+  .post_content > a:not(.mention):hover:after {
+    top: -40px; }
+  .post_content > a:not(.mention):hover:before {
+    top: -10px; }
+  .post_content > a.mention {
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: #333333 !important;
+    background: #f0dc28 !important;
+    font-weight: 600;
+    text-decoration: none !important; }
 
 /* ##################################### */
 /* # Fecha y permalinks (post header)  # */
