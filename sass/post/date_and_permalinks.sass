@@ -1,9 +1,31 @@
+/* ##################################### */
+/* # Fecha y permalinks (post header)  # */
+/* ##################################### */
+
 table[id^=post]
+
+  // ocultar separadores de VB
+  .smallfont:first-child
+    display: none
+    + hr
+      display: none
+
+  border-right: none !important
+  +transition(background .6s ease-out)
+
+  // al seleccionar el post un moderador
+  &.mod_selected
+    background: rgba(250,230,130,.5) !important
+
   .post_header
+
+    // fecha
     .date_info
       float: left
       font-size: 12px
       margin-bottom: 20px
+      
+      // indicador de post no leído / post nuevo
       .postnew
         position: absolute
         top: 0
@@ -13,15 +35,23 @@ table[id^=post]
         border-top: 30px solid #9ACD32
         border-left: 30px solid transparent
         background: none
+      
+      // enlaces
       a:link
         background: none !important
+      
+      // ocultar icono de VB
+      .postold
+        display: none
+
+    // contenedor de enlaces permalinks
     .post_links
       position: relative
       top: -10px
       left: 30px
       float: right
-
       
+      // enlaces
       a
         display: inline-block
         text-decoration: none

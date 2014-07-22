@@ -1,5 +1,12 @@
 @import _base
 
+.cf
+  &:before,&:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
 /* ######### */
 /* # Fonts # */
 /* ######### */
@@ -27,10 +34,6 @@ body
     right: 0
     bottom: 0
     left: 0
-    text-align: center
-    padding: 40px
-    content: 'wait for it...'
-    font: 400 1rem open sans
     background: #f0f0f0
       image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif)
       repeat: no-repeat

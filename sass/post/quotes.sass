@@ -1,3 +1,36 @@
+/* ################## */
+/* # Citas del post # */
+/* ################## */
+
+.post_content
+
+  // post editado
+  ~ div.smallfont
+    position: absolute
+    top: -20px
+    right: 0
+    font-size: 10px
+    text-transform: uppercase
+    text-align: right
+
+    // oculta linea de VB
+    hr
+      display: none
+    em
+      font-style: normal
+
+  + div
+    // firma de usuario
+    &:not(.smallfont)
+      margin-bottom: 20px
+      font-size: 12px
+      border-top: 1px solid #ccc
+      opacity: .2
+      +transition(opacity .5s)
+      padding: 0 40px 40px
+    &:hover
+      opacity: 1
+
 // contenedor original de citas
 .quote-container
   width: auto !important

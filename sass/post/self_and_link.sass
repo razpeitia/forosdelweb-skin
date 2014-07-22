@@ -1,4 +1,20 @@
-@import _base
+/* ################################# */
+/* # Contenedor del post y enlaces # */
+/* ################################# */
+
+// resetear estilos VB
+table[id^=post]
+  background: none !important
+  td,tr
+    border: none !important
+
+.row_post_info td
+  padding: 0 !important
+
+// celda contenedora del post
+.row_post_content td:last-child
+  position: relative
+  background: #fff !important
 
 // contenedor del post (EL POST)
 .post_content

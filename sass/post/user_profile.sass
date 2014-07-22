@@ -1,4 +1,6 @@
-@import _base
+/* ################### */
+/* # Perfil usuario  # */
+/* ################### */
 
 // primeras celdas de las primeras columnas
 tr.row_post_info td:first-child,
@@ -155,38 +157,56 @@ td.user_profile
     +transform(rotate(0deg))
   to
     +transform(rotate(360deg))
-/* popup */
 
+// desplegable VB (al hacer click en el nick)
 table[id^=post] + .vbmenu_popup
-  left: 270px!important
+  left: $user_info_width !important
   margin-top: -20px
+  padding-left: 20px
   border: none
-  background: #444
-  -webkit-transform: translate(-50%, -50%)
-  -moz-transform: translate(-50%, -50%)
-  transform: translate(-50%, -50%)
+  background: none !important
+  clip: none !important
+  +transform(translate(10px, -50%))
+
+  &:before
+    position: absolute
+    top: calc(50% - 15px)
+    left: 0
+    content: ''
+    border-top: 20px solid transparent
+    border-right: 20px solid #333
+    border-bottom: 20px solid transparent
+    z-index: 100
+
   table
     border-spacing: 0
     border-collapse: collapse
+    
+    // oculta el nombre de usuario en el popup
+    tr:first-child
+      display: none
+
+    td
+      padding: 0
+  
+  // enlaces
   .vbmenu_option a
     &:link, &:visited, &:active
       display: block!important
       background: #333
       color: #eee
       font-size: 14px !important
-      -webkit-transition: background .3s
-      -moz-transition: background .3s
-      transition: background .3s
+      +transition(background .3s)
       padding: 10px
+
   .vbmenu_hilite a
     &:link, &:visited, &:active
       display: block!important
       background: #333
       color: #eee
       font-size: 14px !important
-      -webkit-transition: background .3s
-      -moz-transition: background .3s
-      transition: background .3s
+      +transition(background .3s)
       padding: 10px
+
   .vbmenu_option a:hover, .vbmenu_hilite a:hover
     background: #555

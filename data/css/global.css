@@ -1,3 +1,9 @@
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+.cf:after {
+  clear: both; }
+
 /* ######### */
 /* # Fonts # */
 /* ######### */
@@ -32,10 +38,6 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    text-align: center;
-    padding: 40px;
-    content: "wait for it...";
-    font: 400 1rem open sans;
     background: #f0f0f0;
       background-image: url(chrome-extension://__MSG_@@extension_id__/data/images/thatguy.gif);
       background-repeat: no-repeat;
