@@ -116,6 +116,26 @@ $(function() {
       return html.replace('Iniciado por','escribió:');
     });
     
+    // reescribir post para enlazar @menciones (experimental, falta aprobación de FB(aka0))
+    // aprobado por la FB!
+    var post = document.getElementsByClassName('post_content'), mnt = /\B@\w+\b/g, text, iter;
+    for(var ix = 0, ln = post.length; ix < ln; ix++){
+    iter = document.createTreeWalker(post[ix], NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_TEXT,
+        function (a){
+        if (/code|pre|style/i.test(a.nodeName)) return NodeFilter.FILTER_REJECT;
+        return (a.nodeType == Node.ELEMENT_NODE && NodeFilter.FILTER_SKIP) || NodeFilter.FILTER_ACCEPT; 
+    }, false);
+    
+        while (text = iter.nextNode()){
+        var user = mnt.exec(text.data);
+        if (!user) continue;
+        text.splitText(mnt.lastIndex); text.splitText(user.index);
+        text = iter.nextNode();
+        var link = document.createElement('a'); link.href = '/miembros/' +text.data.substring(1)+ '/'; link.className = 'mention';
+        link.appendChild(text.parentNode.replaceChild(link, text));
+        mnt.lastIndex = 0;
+        }
+    }
     // #### COSITAS ######
     // mostrar/ocultar citas
     //$('.quote_text_container').click(function(e){
