@@ -14,8 +14,11 @@ table[id^=post]
   +transition(background .6s ease-out)
 
   // al seleccionar el post un moderador
-  &.mod_selected
-    background: rgba(250,230,130,.5) !important
+  td[id^=td_post]
+    +transition(background 1s)
+
+    &.mod_selected
+      background: rgba($hielo,.5) !important
 
   .post_header
 
@@ -96,9 +99,26 @@ table[id^=post]
       // mod input
       // TODO: moverlo más hacia arriba e integrar
       input
-        position: relative
-        top: 14px
-        left: -20px
+        position: absolute
+        +appearance(none)
+        top: 80px
+        left: 0
+        width: 50px
+        height: 30px
+        margin: 0 !important
+        background: #fff
+        outline: none
+        +transition(background .6s ease-out)
+
+        &:before
+          display: block
+          content: 'mod'
+          width: 100%
+          line-height: 30px
+          text-align: center
+
+        &:checked
+          background: rgba($hielo,.5) !important
 
 +keyframes(blink)
   from,to

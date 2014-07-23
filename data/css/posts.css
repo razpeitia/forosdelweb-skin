@@ -98,7 +98,7 @@ table#thread_header_options {
           transition: border-right 0.3s; }
 
 #thread_tags {
-  padding-left: 305px;
+  padding-left: 280px;
   margin-top: 30px;
   overflow: hidden; }
   #thread_tags .texttags {
@@ -107,12 +107,13 @@ table#thread_header_options {
     #thread_tags .texttags a {
       position: relative;
       display: inline-block;
+      height: 21px;
       margin-right: 30px;
       margin-bottom: 20px;
       padding: 10px;
         padding-right: 20px;
       background: #f0dc28;
-      font-size: 14px !important;
+      font: 300 14px/21px open sans !important;
       border-radius: 8px 0 0 8px;
       color: #a6970c;
       text-decoration: none;
@@ -337,8 +338,13 @@ table[id^=post] {
     display: none; }
     table[id^=post] .smallfont:first-child + hr {
       display: none; }
-  table[id^=post].mod_selected {
-    background: rgba(250, 230, 130, 0.5) !important; }
+  table[id^=post] td[id^=td_post] {
+    -moz-transition: background 1s;
+    -o-transition: background 1s;
+    -webkit-transition: background 1s;
+    transition: background 1s; }
+    table[id^=post] td[id^=td_post].mod_selected {
+      background: rgba(240, 220, 40, 0.5) !important; }
   table[id^=post] .post_header .date_info {
     font-size: 12px;
     margin-bottom: 20px; }
@@ -405,9 +411,28 @@ table[id^=post] {
             -webkit-animation: blink 1s infinite;
             animation: blink 1s infinite; }
     table[id^=post] .post_header .post_links input {
-      position: relative;
-      top: 14px;
-      left: -20px; }
+      position: absolute;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      top: 80px;
+      left: 0;
+      width: 50px;
+      height: 30px;
+      margin: 0 !important;
+      background: white;
+      outline: none;
+      -moz-transition: background 0.6s ease-out;
+      -o-transition: background 0.6s ease-out;
+      -webkit-transition: background 0.6s ease-out;
+      transition: background 0.6s ease-out; }
+      table[id^=post] .post_header .post_links input:before {
+        display: block;
+        content: "mod";
+        width: 100%;
+        line-height: 30px;
+        text-align: center; }
+      table[id^=post] .post_header .post_links input:checked {
+        background: rgba(240, 220, 40, 0.5) !important; }
 
 @-moz-keyframes blink {
   from, to {
