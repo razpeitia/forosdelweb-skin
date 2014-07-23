@@ -25,3 +25,42 @@
       float: right
       font-size: .8rem
       color: #aaa !important
+
+  // ennegrecer [code] y [php]
+  div:not(.quote-container) div.alt2
+    width: auto !important
+    background: #333
+    
+    // para [code]
+    pre
+      color: #eee !important
+      font-size: 14px !important
+    
+    // para [php]
+    code
+      display: block !important
+      background: transparent !important
+      border: none !important
+      padding: 0 !important
+
+      // ¿dos code? Pregúntale a VB
+      code
+        display: block !important
+        background: transparent !important
+        border: none !important
+        padding: 0 !important
+        font-size: 14px !important
+
+        span
+          // variables/funciones
+          &[style$="0000BB"]
+            color: #eee !important
+          // cadenas
+          &[style$="DD0000"]
+            color: #9f0 !important
+          // comentarios
+          &[style$="FF8000"]
+            color: #999 !important
+          // por poner algo
+          &[style$="007700"]
+            color: #ff8400 !important

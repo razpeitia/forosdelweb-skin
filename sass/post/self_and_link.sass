@@ -37,7 +37,11 @@ td[id^=td_post]
 
   // cualquier enlace directo (evitar estilizar otros)
   // está muy feo, no recuerdo porqué
-  > a
+  > a:not(.mention),
+  > b > a:not(.mention),
+  > strong > a:not(.mention),
+  > i > a:not(.mention),
+  > em > a:not(.mention)
     &:link, &:active
       position: relative
       display: inline-block !important
@@ -97,3 +101,13 @@ td[id^=td_post]
         top: -40px
       &:before
         top: -10px
+
+  // menciones
+  > a.mention
+    display: inline-block
+    padding: 3px 5px
+    border-radius: 5px
+    color: #333 !important
+    background: $hielo !important
+    font-weight: 600
+    text-decoration: none !important

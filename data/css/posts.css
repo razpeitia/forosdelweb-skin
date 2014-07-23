@@ -192,7 +192,15 @@ td[id^=td_post] {
   overflow: visible !important; }
   .post_content > * {
     line-height: 20px; }
-  .post_content > a:link, .post_content > a:active {
+  .post_content > a:not(.mention):link, .post_content > a:not(.mention):active,
+  .post_content > b > a:not(.mention):link,
+  .post_content > b > a:not(.mention):active,
+  .post_content > strong > a:not(.mention):link,
+  .post_content > strong > a:not(.mention):active,
+  .post_content > i > a:not(.mention):link,
+  .post_content > i > a:not(.mention):active,
+  .post_content > em > a:not(.mention):link,
+  .post_content > em > a:not(.mention):active {
     position: relative;
     display: inline-block !important;
     background: none !important;
@@ -203,7 +211,15 @@ td[id^=td_post] {
     -o-transition: background 0.4s;
     -webkit-transition: background 0.4s;
     transition: background 0.4s; }
-    .post_content > a:link:after, .post_content > a:active:after {
+    .post_content > a:not(.mention):link:after, .post_content > a:not(.mention):active:after,
+    .post_content > b > a:not(.mention):link:after,
+    .post_content > b > a:not(.mention):active:after,
+    .post_content > strong > a:not(.mention):link:after,
+    .post_content > strong > a:not(.mention):active:after,
+    .post_content > i > a:not(.mention):link:after,
+    .post_content > i > a:not(.mention):active:after,
+    .post_content > em > a:not(.mention):link:after,
+    .post_content > em > a:not(.mention):active:after {
       top: -50px;
       max-width: 200px;
       padding: 5px;
@@ -215,13 +231,37 @@ td[id^=td_post] {
       text-overflow: ellipsis;
       overflow: hidden;
       content: attr(href); }
-    .post_content > a:link:before, .post_content > a:active:before {
+    .post_content > a:not(.mention):link:before, .post_content > a:not(.mention):active:before,
+    .post_content > b > a:not(.mention):link:before,
+    .post_content > b > a:not(.mention):active:before,
+    .post_content > strong > a:not(.mention):link:before,
+    .post_content > strong > a:not(.mention):active:before,
+    .post_content > i > a:not(.mention):link:before,
+    .post_content > i > a:not(.mention):active:before,
+    .post_content > em > a:not(.mention):link:before,
+    .post_content > em > a:not(.mention):active:before {
       top: -20px;
       content: "";
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid rgba(0, 0, 0, 0.7); }
-    .post_content > a:link:after, .post_content > a:link:before, .post_content > a:active:after, .post_content > a:active:before {
+    .post_content > a:not(.mention):link:after, .post_content > a:not(.mention):link:before, .post_content > a:not(.mention):active:after, .post_content > a:not(.mention):active:before,
+    .post_content > b > a:not(.mention):link:after,
+    .post_content > b > a:not(.mention):link:before,
+    .post_content > b > a:not(.mention):active:after,
+    .post_content > b > a:not(.mention):active:before,
+    .post_content > strong > a:not(.mention):link:after,
+    .post_content > strong > a:not(.mention):link:before,
+    .post_content > strong > a:not(.mention):active:after,
+    .post_content > strong > a:not(.mention):active:before,
+    .post_content > i > a:not(.mention):link:after,
+    .post_content > i > a:not(.mention):link:before,
+    .post_content > i > a:not(.mention):active:after,
+    .post_content > i > a:not(.mention):active:before,
+    .post_content > em > a:not(.mention):link:after,
+    .post_content > em > a:not(.mention):link:before,
+    .post_content > em > a:not(.mention):active:after,
+    .post_content > em > a:not(.mention):active:before {
       position: absolute;
       left: 50%;
       opacity: 0;
@@ -235,22 +275,54 @@ td[id^=td_post] {
       -webkit-transition: opacity 0.3s, top 0.3s, visibility 0;
       -webkit-transition-delay: 0s, 0s, 0.3s;
       transition: opacity 0.3s, top 0.3s, visibility 0 0.3s; }
-  .post_content > a:visited {
+  .post_content > a:not(.mention):visited,
+  .post_content > b > a:not(.mention):visited,
+  .post_content > strong > a:not(.mention):visited,
+  .post_content > i > a:not(.mention):visited,
+  .post_content > em > a:not(.mention):visited {
     border-color: black;
     color: black !important; }
-    .post_content > a:visited:after {
+    .post_content > a:not(.mention):visited:after,
+    .post_content > b > a:not(.mention):visited:after,
+    .post_content > strong > a:not(.mention):visited:after,
+    .post_content > i > a:not(.mention):visited:after,
+    .post_content > em > a:not(.mention):visited:after {
       color: white !important; }
-  .post_content > a:hover:after, .post_content > a:hover:before {
+  .post_content > a:not(.mention):hover:after, .post_content > a:not(.mention):hover:before,
+  .post_content > b > a:not(.mention):hover:after,
+  .post_content > b > a:not(.mention):hover:before,
+  .post_content > strong > a:not(.mention):hover:after,
+  .post_content > strong > a:not(.mention):hover:before,
+  .post_content > i > a:not(.mention):hover:after,
+  .post_content > i > a:not(.mention):hover:before,
+  .post_content > em > a:not(.mention):hover:after,
+  .post_content > em > a:not(.mention):hover:before {
     opacity: 1;
     visibility: visible;
     -moz-transition: opacity 0.3s, top 0.3s, visibility 0;
     -o-transition: opacity 0.3s, top 0.3s, visibility 0;
     -webkit-transition: opacity 0.3s, top 0.3s, visibility 0;
     transition: opacity 0.3s, top 0.3s, visibility 0; }
-  .post_content > a:hover:after {
+  .post_content > a:not(.mention):hover:after,
+  .post_content > b > a:not(.mention):hover:after,
+  .post_content > strong > a:not(.mention):hover:after,
+  .post_content > i > a:not(.mention):hover:after,
+  .post_content > em > a:not(.mention):hover:after {
     top: -40px; }
-  .post_content > a:hover:before {
+  .post_content > a:not(.mention):hover:before,
+  .post_content > b > a:not(.mention):hover:before,
+  .post_content > strong > a:not(.mention):hover:before,
+  .post_content > i > a:not(.mention):hover:before,
+  .post_content > em > a:not(.mention):hover:before {
     top: -10px; }
+  .post_content > a.mention {
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: #333333 !important;
+    background: #f0dc28 !important;
+    font-weight: 600;
+    text-decoration: none !important; }
 
 /* ##################################### */
 /* # Fecha y permalinks (post header)  # */
@@ -376,6 +448,31 @@ table[id^=post] {
   float: right;
   font-size: 0.8rem;
   color: #aaaaaa !important; }
+.post_content div:not(.quote-container) div.alt2 {
+  width: auto !important;
+  background: #333333; }
+  .post_content div:not(.quote-container) div.alt2 pre {
+    color: #eeeeee !important;
+    font-size: 14px !important; }
+  .post_content div:not(.quote-container) div.alt2 code {
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important; }
+    .post_content div:not(.quote-container) div.alt2 code code {
+      display: block !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      font-size: 14px !important; }
+      .post_content div:not(.quote-container) div.alt2 code code span[style$="0000BB"] {
+        color: #eeeeee !important; }
+      .post_content div:not(.quote-container) div.alt2 code code span[style$="DD0000"] {
+        color: #99ff00 !important; }
+      .post_content div:not(.quote-container) div.alt2 code code span[style$="FF8000"] {
+        color: #999999 !important; }
+      .post_content div:not(.quote-container) div.alt2 code code span[style$="007700"] {
+        color: #ff8400 !important; }
 
 /* ################### */
 /* # Perfil usuario  # */
