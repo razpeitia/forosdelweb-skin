@@ -31,8 +31,9 @@
       background: #fff
       border-radius: 50%
       border: 2px solid #eee
+      opacity: 0
       +transform(scale(0.9))
-      +transition(transform .4s ease-out)
+      +transition(transform .4s ease-out, opacity .4s ease-out)
 
       // ocultar imagen de VB
       img
@@ -70,7 +71,8 @@
         // multicita
         &.multi
           &.selected
-            background-color: rgba(gold,.5)
+            background-color: rgba(gold,1)
+            opacity: 1
 
           &:after
             background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png")
@@ -91,8 +93,9 @@
       background: #fff
       border-radius: 50%
       border: 2px solid #eee
+      opacity: 0
       +transform(scale(0.9))
-      +transition(transform .4s ease-out)
+      +transition(transform .4s ease-out, opacity .4s ease-out)
       &:hover
         +transform(scale(1))
         &:after
@@ -110,6 +113,7 @@
         background-size: cover
         -webkit-filter: grayscale(1)
         +transition(transform .2s ease-out, -webkit-filter .1s)
+
       
       // contiene enlace de voto
       > div:first-child
@@ -156,12 +160,48 @@
           &:hover
             background: green
 
+      // votos propios
+      &:not(.others)
+
+        &:after
+          -webkit-filter: grayscale(0)
+
+        // contiene cuenteo de votos
+        > div:last-child
+
+          span, a
+            width: 100% !important
+            height: 100% !important
+
+          span
+            top: 0
+            left: 0
+            right: 0
+            //width: 18px !important
+            //height: 18px !important
+
+          a
+            line-height: 80px
+            background: none
+            color: #fff !important
+            border-radius: 0
+            border: none
+            font:
+              weight: 800
+              size: 1rem
+              family: open sans
+
 // animación para el corazón
 +keyframes(vive)
   from, 10%, 20%, 30%, to
     +transform(scale(1.3,1.3))
   15%, 25%
     +transform(scale(1.6,1.6))
+
+// hacer visible las opciones del post al pasar por la tabla
+table[id^=post] .row_post_options td:nth-child(2):hover
+  a.post_option_link, .love
+    opacity: 1
 
 // iconos de los botones de opciones (para firefox)
 @-moz-document url-prefix()

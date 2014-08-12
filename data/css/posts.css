@@ -462,9 +462,9 @@ table[id^=post] {
   display: inline-block;
   font-family: monaco, "andale mono", monospace !important;
   font-size: 12px !important;
-  background: white !important;
+  background: #dddddd !important;
   border-radius: 4px;
-  border: 1px solid #dddddd;
+  border: 1px solid #bbbbbb;
   padding: 4px; }
 .post_content .geshibox a:link {
   background-color: transparent !important;
@@ -728,7 +728,7 @@ table[id^=post] + .vbmenu_popup {
   margin-bottom: 20px;
   font-size: 12px;
   border-top: 1px solid #cccccc;
-  opacity: 0.4;
+  opacity: 0.6;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
@@ -818,14 +818,15 @@ table[id^=post] + .vbmenu_popup {
   background: white;
   border-radius: 50%;
   border: 2px solid #eeeeee;
+  opacity: 0;
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
-  -moz-transition: -moz-transform 0.4s ease-out;
-  -o-transition: -o-transform 0.4s ease-out;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out; }
+  -moz-transition: -moz-transform 0.4s ease-out, opacity 0.4s ease-out;
+  -o-transition: -o-transform 0.4s ease-out, opacity 0.4s ease-out;
+  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out; }
   .row_post_options td:nth-child(2) a.post_option_link img {
     display: none; }
   .row_post_options td:nth-child(2) a.post_option_link:hover {
@@ -855,7 +856,8 @@ table[id^=post] + .vbmenu_popup {
   .row_post_options td:nth-child(2) a.post_option_link.quote_post:after {
     background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/quote.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi.selected {
-    background-color: rgba(255, 215, 0, 0.5); }
+    background-color: gold;
+    opacity: 1; }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.multi:after {
     background-image: url("chrome-extension://__MSG_@@extension_id__/data/images/multi.png"); }
   .row_post_options td:nth-child(2) a.post_option_link.quote_post.fast:after {
@@ -871,14 +873,15 @@ table[id^=post] + .vbmenu_popup {
   background: white;
   border-radius: 50%;
   border: 2px solid #eeeeee;
+  opacity: 0;
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
-  -moz-transition: -moz-transform 0.4s ease-out;
-  -o-transition: -o-transform 0.4s ease-out;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out; }
+  -moz-transition: -moz-transform 0.4s ease-out, opacity 0.4s ease-out;
+  -o-transition: -o-transform 0.4s ease-out, opacity 0.4s ease-out;
+  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out; }
   .row_post_options td:nth-child(2) .love:hover {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -936,6 +939,24 @@ table[id^=post] + .vbmenu_popup {
     border: 3px solid white; }
     .row_post_options td:nth-child(2) .love > div:last-child a:hover {
       background: green; }
+  .row_post_options td:nth-child(2) .love:not(.others):after {
+    -webkit-filter: grayscale(0); }
+  .row_post_options td:nth-child(2) .love:not(.others) > div:last-child span, .row_post_options td:nth-child(2) .love:not(.others) > div:last-child a {
+    width: 100% !important;
+    height: 100% !important; }
+  .row_post_options td:nth-child(2) .love:not(.others) > div:last-child span {
+    top: 0;
+    left: 0;
+    right: 0; }
+  .row_post_options td:nth-child(2) .love:not(.others) > div:last-child a {
+    line-height: 80px;
+    background: none;
+    color: white !important;
+    border-radius: 0;
+    border: none;
+    font-weight: 800;
+    font-size: 1rem;
+    font-family: open sans; }
 
 @-moz-keyframes vive {
   from, 10%, 20%, 30%, to {
@@ -965,6 +986,9 @@ table[id^=post] + .vbmenu_popup {
     -ms-transform: scale(1.6, 1.6);
     -webkit-transform: scale(1.6, 1.6);
     transform: scale(1.6, 1.6); } }
+table[id^=post] .row_post_options td:nth-child(2):hover a.post_option_link, table[id^=post] .row_post_options td:nth-child(2):hover .love {
+  opacity: 1; }
+
 @-moz-document url-prefix() {
   .row_post_options td:nth-child(2) a.post_option_link.edit_post:after {
     background-image: url(../images/edit.png); }

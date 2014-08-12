@@ -52,7 +52,6 @@ $(function() {
       if(link.length>0) post_link = link[0].outerHTML
       var input = $(this).children('td:last-child').children('input')
       if(input.length>0) post_input = input[0].outerHTML
-      console.log(link)
       var post_permalink = $(this).children('td:last-child').children('b').html().replace("permalink","#")
       var post_links = '<div class=post_links>' + post_input + post_link  + post_permalink + '</div>';
       var post_date = '<div class=date_info>' + $(this).children('td:first-child').html() + '</div>';
@@ -84,7 +83,8 @@ $(function() {
     $('.row_post_options div.smallfont > a[id^=fdwvotepos_like]').parent().hide();
 
     // añadir clase al +1
-    $('.row_post_options td:nth-child(2)>div>div>span[id^=fdwvotepos_]').parent().parent().addClass('love');
+    $('.row_post_options td:nth-child(2)>div>div>span[id^=fdwvotepos_]').parent().parent().addClass('others');
+    $('.row_post_options td:nth-child(2)>div[style="float:right;margin-left:4px"]').addClass('love');
 
     // adding ids to top tables
     $('#poststop + table').attr('id','response_button_container');
