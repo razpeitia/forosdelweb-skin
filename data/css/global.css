@@ -1,3 +1,6 @@
+#loginform_menu.force_login {
+  display: block !important; }
+
 .cf:before, .cf:after {
   content: " ";
   display: table; }

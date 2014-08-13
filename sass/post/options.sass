@@ -162,9 +162,12 @@
 
       // votos propios
       &:not(.others)
+        //background: firebrick
 
         &:after
-          -webkit-filter: grayscale(0)
+          //background: none
+          +transform(scale(1.5,1.5))
+          +animation(none)
 
         // contiene cuenteo de votos
         > div:last-child

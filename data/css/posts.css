@@ -940,7 +940,13 @@ table[id^=post] + .vbmenu_popup {
     .row_post_options td:nth-child(2) .love > div:last-child a:hover {
       background: green; }
   .row_post_options td:nth-child(2) .love:not(.others):after {
-    -webkit-filter: grayscale(0); }
+    -moz-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -moz-animation: none;
+    -webkit-animation: none;
+    animation: none; }
   .row_post_options td:nth-child(2) .love:not(.others) > div:last-child span, .row_post_options td:nth-child(2) .love:not(.others) > div:last-child a {
     width: 100% !important;
     height: 100% !important; }
